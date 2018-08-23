@@ -1,0 +1,37 @@
+body {
+  --bg-color: #4ABDAC;
+  --bg-transparent: radial-gradient(rgba(74,189,172,1),rgba(74,189,172,0.8));
+  --emphasis-color: #FC4A1A;
+  --link-color: #FFD683;
+  --text-color: #DFDCE3;
+  --visited-color: #FFEFD0;
+  background: var(--bg-transparent), url('../images/lucas-on-trike.jpg') 0 0/cover;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.content-block {
+  color: var(--text-color);
+  text-align: center;
+  width: 50%;
+}
+
+.content-block a {
+  color: var(--link-color);
+}
+
+.content-block a:visited {
+  color: var(--visited-color);
+}
+
+.heading {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
