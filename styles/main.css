@@ -75,6 +75,12 @@ h2 {
   width: 163px;
 }
 
+.nav--list--item:hover .nav--button {
+  background: linear-gradient(var(--visited-color), #DBAE53);
+  box-shadow: 0 0 1.5em var(--text-color);
+  color: black;
+}
+
 .nav--outside-links {
   font-size: 0.75em;
   line-height: 2em;
@@ -103,12 +109,27 @@ h2 {
     background: var(--bg-orange-transparent), url('../images/lucas-in-park-thumbnail.jpg') 0 0/cover;
   }
 
+  .nav--list--item:hover .nav--list--image__about {
+    background: url('../images/lucas-in-park-thumbnail.jpg') 0 0/cover;
+    box-shadow: 0 0 1.5em var(--text-color);
+  }
+
   .nav--list--image__projects {
     background: var(--bg-orange-transparent), url('../images/code-image.jpg') 0 0/cover;
   }
 
+  .nav--list--item:hover .nav--list--image__projects {
+    background: url('../images/code-image.jpg') 0 0/cover;
+    box-shadow: 0 0 1.5em var(--text-color);
+  }
+
   .nav--list--image__blog {
     background: var(--bg-orange-transparent), url('../images/book-image.jpg') 0 0/cover;
+  }
+
+  .nav--list--item:hover .nav--list--image__blog {
+    background: url('../images/book-image.jpg') 0 0/cover;
+    box-shadow: 0 0 1.5em var(--text-color);
   }
 
   .nav--outside-links {
