@@ -26,16 +26,14 @@ class Button extends React.Component {
 
   componentWillMount() {
     if (window.location.toString().endsWith(this.props.url) && !this.state.active) {
-      this.setState({
-        active: true
-      });
+      this.setState({ active: true });
     }
   }
 
   render() {
     return (
       <button
-        className = {this.state.active ? 'button button-active' : 'button'}
+        className = {this.state.active ? 'nav--button nav--button--active' : 'nav--button'}
         onClick = {this.buttonClick}>
         {this.props.name}
         </button>
@@ -48,23 +46,34 @@ class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pages: navPages
+      pages: navPages,
+      home: true
+    }
+  }
+
+  componentWillMount() {
+    if (!window.location.toString().endsWith('index.html')) {
+      this.setState({...this.state, home: false});
+    }
+    else if (this.state.home === false && window.location.toString().endsWith('index.html')) {
+      this.setState({...this.state, home: true});
     }
   }
 
   render() {
     return (
-      <div className="nav--container">
-        <nav className="nav"><ul>
+      <nav className={this.state.home ? 'nav' : 'nav nav__top'}>
+        <ul className="nav--list">
           {this.state.pages.map(x => (
-            <li key={x.name}><Button name={x.name} url={x.url} /></li>
+            <li key={x.name} className="nav--list--item"><Button name={x.name} url={x.url} /></li>
           ))}
-        </ul></nav>
-        <div className="nav nav--outside">
+        </ul>
+        <div className="nav--outside-links">
           <a href="https://github.com/ogdendavis" target="_blank">GitHub</a>
+          <br />
           <a href="https://codepen.io/ogdendavis" target="_blank">CodePen</a>
         </div>
-      </div>
+      </nav>
     )
   }
 }
