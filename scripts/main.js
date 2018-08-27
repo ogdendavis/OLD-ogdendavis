@@ -49,14 +49,34 @@ class Nav extends React.Component {
       pages: navPages,
       home: true
     }
+    this.buttonize = this.buttonize.bind(this);
+  }
+
+  buttonize() {
+    const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    if (width < 640) {
+      return this.state.pages.map(x => (
+        <li key={x.name} className="nav--list--item"><Button name={x.name} url={x.url} /></li>
+      ));
+    }
+    else {
+      return this.state.pages.map(x => (
+        <li key={x.name} className="nav--list--item">
+          <Button name={x.name} url={x.url} />
+          <div className={`nav--list--image nav--list--image__${x.name.toLowerCase()}`} />
+        </li>
+      ));
+    }
   }
 
   componentWillMount() {
     if (!window.location.toString().endsWith('index.html')) {
       this.setState({...this.state, home: false});
     }
-    else if (this.state.home === false && window.location.toString().endsWith('index.html')) {
-      this.setState({...this.state, home: true});
+    else {
+      const newState = {...this.state};
+      delete newState.pages[0];
+      this.setState({...newState, home: true});
     }
   }
 
@@ -64,9 +84,7 @@ class Nav extends React.Component {
     return (
       <nav className={this.state.home ? 'nav' : 'nav nav__top'}>
         <ul className="nav--list">
-          {this.state.pages.map(x => (
-            <li key={x.name} className="nav--list--item"><Button name={x.name} url={x.url} /></li>
-          ))}
+          {this.buttonize()}
         </ul>
         <div className="nav--outside-links">
           <a href="https://github.com/ogdendavis" target="_blank">GitHub</a>
