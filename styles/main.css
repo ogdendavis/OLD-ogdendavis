@@ -8,6 +8,7 @@ body {
   --link-color: #FFD683;
   --rounded: 0.2em;
   --text-color: #DFDCE3;
+  --transition-time: 0.5s;
   --visited-color: #FFEFD0;
   background: var(--bg-blue-transparent), url('../images/lucas-on-trike.jpg') 0 0/cover;
   color: var(--text-color);
@@ -90,7 +91,7 @@ h2 {
   width: 163px;
 }
 
-/* Header & Nav on desktop */
+/* Header & Nav in index on desktop */
 
 @media only screen and (min-width: 640px) {
   .nav--list--item {
@@ -138,6 +139,89 @@ h2 {
   }
 }
 
+/* Header & Nav on sub-pages (mobile) */
+
+.nav__header {
+  background: var(--bg-orange-transparent);
+  flex-direction: row;
+  position: relative;
+  top: 0;
+}
+
+.nav--toggle {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: 700;
+  transform: rotate(90deg);
+  transition: var(--transition-time);
+  -moz-transition: var(--transition-time);
+  -ms-transition: var(--transition-time);
+  -o-transition: var(--transition-time);
+  -webkit-transition: var(--transition-time);
+}
+
+.nav--toggle:hover {
+  cursor: pointer;
+}
+
+.nav--toggle__expand {
+  transform: rotate(-90deg);
+  transition: var(--transition-time);
+  -moz-transition: var(--transition-time);
+  -ms-transition: var(--transition-time);
+  -o-transition: var(--transition-time);
+  -webkit-transition: var(--transition-time);
+}
+
+.nav--list__collapse {
+  list-style: none;
+  margin: 0;
+  height: 2.75em;
+  overflow-y: hidden;
+  padding: 0 1em;
+  transition: var(--transition-time);
+  -moz-transition: var(--transition-time);
+  -ms-transition: var(--transition-time);
+  -o-transition: var(--transition-time);
+  -webkit-transition: var(--transition-time);
+}
+
+.nav--list__expand {
+  height: 13em;
+  transition: var(--transition-time);
+  -moz-transition: var(--transition-time);
+  -ms-transition: var(--transition-time);
+  -o-transition: var(--transition-time);
+  -webkit-transition: var(--transition-time);
+}
+
+.nav--list__collapse .nav--list--item {
+  text-align: left;
+}
+
+.nav--list__collapse .nav--button {
+  background: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+}
+
+.nav--list__collapse .nav--list--item:hover .nav--button {
+  background: none;
+  box-shadow: none;
+  color: black;
+  text-shadow: 0 0 1em white;
+}
+
+.nav--outside-links__header {
+  font-size: 0.75em;
+  line-height: 1.5em;
+  padding: 0.25em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 
 /* Main (legacy from placeholder page) */
 

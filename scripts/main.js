@@ -47,9 +47,12 @@ class Nav extends React.Component {
     super(props);
     this.state = {
       pages: navPages,
-      home: true
+      home: true,
+      navHide: true
     }
     this.buttonize = this.buttonize.bind(this);
+    this.pickNav = this.pickNav.bind(this);
+    this.toggleNavHide = this.toggleNavHide.bind(this);
   }
 
   buttonize() {
@@ -69,6 +72,23 @@ class Nav extends React.Component {
     }
   }
 
+  pickNav() {
+    if (window.location.toString().endsWith('index.html')) {
+      return null;
+    }
+    return this.state.navHide ?
+      (<div className="nav--toggle" onClick={this.toggleNavHide}> > </div>) :
+      (<div className="nav--toggle nav--toggle__expand" onClick={this.toggleNavHide}> > </div>)
+  }
+
+  toggleNavHide() {
+    const toggled = !this.state.navHide;
+    this.setState({
+      ...this.state,
+      navHide: toggled
+    });
+  }
+
   componentWillMount() {
     if (!window.location.toString().endsWith('index.html')) {
       this.setState({...this.state, home: false});
@@ -82,11 +102,13 @@ class Nav extends React.Component {
 
   render() {
     return (
-      <nav className={this.state.home ? 'nav' : 'nav nav__top'}>
-        <ul className="nav--list">
+      <nav className={this.state.home ? 'nav' : 'nav__header'}>
+        <ul className={this.state.home ? 'nav--list' :
+                       this.state.navHide ? 'nav--list__collapse' : 'nav--list__collapse nav--list__expand'}>
+          {this.pickNav()}
           {this.buttonize()}
         </ul>
-        <div className="nav--outside-links">
+        <div className={this.state.home ? 'nav--outside-links' : 'nav--outside-links__header'}>
           <a href="https://github.com/ogdendavis" target="_blank">GitHub</a>
           <br />
           <a href="https://codepen.io/ogdendavis" target="_blank">CodePen</a>
