@@ -223,9 +223,20 @@ h2 {
   top: 0;
 }
 
+/* Header & Nav on sub-pages (desktop) */
+
+@media only screen and (min-width: 640px) {
+
+}
+
 /* Main (legacy from placeholder page) */
 
 .main {
+  line-height: 1.5em;
+  margin: auto;
+  width: 90vw;
+}
+
+.main__centered {
   text-align: center;
-  width: 100vw;
 }

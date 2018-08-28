@@ -14,9 +14,7 @@ const navPages = [
 class Button extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      active: false
-    };
+    this.state = { active: false };
     this.buttonClick = this.buttonClick.bind(this);
   }
 
@@ -57,7 +55,7 @@ class Nav extends React.Component {
 
   buttonize() {
     const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    if (width < 640) {
+    if (width < 640 || (width >= 640 && this.state.home === false)) {
       return this.state.pages.map(x => (
         <li key={x.name} className="nav--list--item"><Button name={x.name} url={x.url} /></li>
       ));
@@ -73,7 +71,8 @@ class Nav extends React.Component {
   }
 
   pickNav() {
-    if (window.location.toString().endsWith('index.html')) {
+    const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    if (this.state.home === true || width >= 640) {
       return null;
     }
     return this.state.navHide ?
@@ -83,18 +82,20 @@ class Nav extends React.Component {
 
   toggleNavHide() {
     const toggled = !this.state.navHide;
-    this.setState({
-      ...this.state,
-      navHide: toggled
-    });
+    this.setState({ navHide: toggled });
   }
 
   componentWillMount() {
     if (!window.location.toString().endsWith('index.html')) {
-      this.setState({...this.state, home: false});
+      this.setState({ home: false });
     }
     else {
-      const newState = {...this.state};
+      const newState = JSON.parse(JSON.stringify(this.state));
+      // Switched above from newState = {...this.state} because the spread operator
+      // returns a shallow copy, which I then modified below. This isn't a problem
+      // in this application (state gets reset from the global navPages object with
+      // each page navigation), but wanted to fix the issue to remind myself of
+      // best practices.
       delete newState.pages[0];
       this.setState({...newState, home: true});
     }
