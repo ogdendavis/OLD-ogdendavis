@@ -258,6 +258,7 @@ h2 {
   margin: 1em auto;
   padding: 0 5%;
   width: 90%;
+  max-width: 326px;
 }
 
 .article--figure__wide {
@@ -304,7 +305,11 @@ h2 {
 
 @media only screen and (min-width: 640px) {
   .main {
-    max-width: 600px;
+    background: linear-gradient(rgba(14,150,131,0.5),rgba(14,150,131,0.5));
+    border-radius: var(--rounded);
+    margin-top: 2em;
+    max-width: 640px;
+    padding: 1em;
     text-align: justify;
   }
 
@@ -312,9 +317,11 @@ h2 {
     margin-bottom: 2em;
   }
 
-  .article--figure {
+  .article--figure__right {
     float: right;
-    width: 326px;
+    margin: 0 0 1em 1em;
+    padding: 0;
+    width: 40%;
   }
 
 }
