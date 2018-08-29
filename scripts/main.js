@@ -86,8 +86,10 @@ class Nav extends React.Component {
   }
 
   componentWillMount() {
+    console.log(window.location.toString(), this.state.home)
     const locationString = window.location.toString();
-    if (!locationString.endsWith('index.html') || !locationString.endsWith('.com/')) {
+    if (!locationString.endsWith('index.html') && !locationString.endsWith('.com/')) {
+      console.log('falsifying home');
       this.setState({ home: false });
     }
     else {
