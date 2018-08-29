@@ -29,17 +29,26 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
+figure {
+  margin: 0;
+}
+
 h1 {
-  background: var(--emphasis-color);
-  color: var(--text-color);
   font-size: 2em;
   font-weight: 900;
+  margin: 0;
   padding: 0.5em 0.1em;
 }
 
 h2 {
   font-size: 1.25em;
   font-weight: 700;
+}
+
+.header__emphasis {
+  background: var(--emphasis-color);
+  color: var(--text-color);
+  margin: 0.5em auto;
 }
 
 /* Header & Nav */
@@ -226,17 +235,86 @@ h2 {
 /* Header & Nav on sub-pages (desktop) */
 
 @media only screen and (min-width: 640px) {
-
+  /* No changes needed here! Made adjustments in main.js */
 }
 
-/* Main (legacy from placeholder page) */
+/* Main (for simple pages on mobile) */
 
 .main {
-  line-height: 1.5em;
   margin: auto;
   width: 90vw;
 }
 
 .main__centered {
   text-align: center;
+}
+
+.main--article {
+  line-height: 1.5em;
+}
+
+.article--figure {
+  box-sizing: border-box;
+  margin: 1em auto;
+  padding: 0 5%;
+  width: 90%;
+}
+
+.article--figure__wide {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.figure--image {
+  border-radius: var(--rounded);
+  display: block;
+  margin: auto;
+  width: 90%;
+}
+
+.figure--image__wide {
+  border-radius: var(--rounded);
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.figure--caption {
+  display: block;
+  font-size: 0.75em;
+  font-style: italic;
+  line-height: 1.5em;
+  margin: auto;
+  width: 90%;
+}
+
+.figure--caption__wide {
+  display: block;
+  font-size: 0.75em;
+  font-style: italic;
+  line-height: 1.5em;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+/* Main (for simple pages on desktop) */
+
+@media only screen and (min-width: 640px) {
+  .main {
+    max-width: 600px;
+    text-align: justify;
+  }
+
+  .main--article p {
+    margin-bottom: 2em;
+  }
+
+  .article--figure {
+    float: right;
+    width: 326px;
+  }
+
 }
