@@ -1,0 +1,20 @@
+{
+  "roguelike": {
+    "name": "Roguelike Game",
+    "description": "An in-browser game in which players explore the 'hospital', clean messes, and defeat the boss!",
+    "technologies": ["HTML", "SCSS", "JavaScript", "React", "Redux"],
+    "live-url": "https://ogdendavis.github.io/roguelike/",
+    "repo-url": "https://github.com/ogdendavis/roguelike",
+    "image-monitor": "images/portfolio/roguelike-monitor.jpg",
+    "image-phone": "images/portfolio/roguelike-phone.png"
+  },
+  "google-clone": {
+    "name": "Google Clone",
+    "description": "A clone of the Google homepage, with some added 'functionality'.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "live-url": "https://ogdendavis.github.io/google-clone/",
+    "repo-url": "https://github.com/ogdendavis/google-clone",
+    "image-monitor": "",
+    "image-phone": ""
+  }
+}
