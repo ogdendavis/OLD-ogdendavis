@@ -14,6 +14,60 @@
     "technologies": ["HTML", "CSS", "JavaScript"],
     "live-url": "https://ogdendavis.github.io/google-clone/",
     "repo-url": "https://github.com/ogdendavis/google-clone",
+    "image-monitor": "images/portfolio/google-clone-monitor.png",
+    "image-phone": "images/portfolio/google-clone-phone.png"
+  },
+  "android-logo": {
+    "name": "CSS Android",
+    "description": "An Android logo with custom animations.",
+    "technologies": ["HTML", "CSS"],
+    "live-url": "https://ogdendavis.github.io/android-logo/",
+    "repo-url": "https://github.com/ogdendavis/android-logo",
+    "image-monitor": "",
+    "image-phone": ""
+  },
+  "calculator": {
+    "name": "Simple Calculator",
+    "description": "A JavaScript calculator with background changes based on time of day.",
+    "technologies": ["HTML", "CSS", "Bootstap", "jQuery"],
+    "live-url": "https://ogdendavis.github.io/calculator/",
+    "repo-url": "https://github.com/ogdendavis/calculator",
+    "image-monitor": "",
+    "image-phone": ""
+  },
+  "game-of-life": {
+    "name": "Game of Life",
+    "description": "A React implementation of Conway's Game of Life.",
+    "technologies": ["SCSS", "JavaScript", "React"],
+    "live-url": "https://codepen.io/ogdendavis/full/LQXgZZ/",
+    "repo-url": "https://codepen.io/ogdendavis/pen/LQXgZZ",
+    "image-monitor": "",
+    "image-phone": ""
+  },
+  "heat-map": {
+    "name": "Literal Heat Map",
+    "description": "A visual representation of global monthly temperatures from 1753 to 2015.",
+    "technologies": ["HTML", "CSS", "JavaScript", "D3"],
+    "live-url": "https://codepen.io/ogdendavis/full/yjJNGw/",
+    "repo-url": "https://codepen.io/ogdendavis/pen/yjJNGw",
+    "image-monitor": "",
+    "image-phone": ""
+  },
+  "simon-game": {
+    "name": "Simon Game",
+    "description": "An in-browser version of the classic kid's game, with requisite 80's nostalgia.",
+    "technologies": ["HTML", "CSS", "jQuery", "Bootstrap"],
+    "live-url": "https://codepen.io/ogdendavis/full/bLGGxZ/",
+    "repo-url": "https://codepen.io/ogdendavis/pen/bLGGxZ",
+    "image-monitor": "",
+    "image-phone": ""
+  },
+  "weather-app": {
+    "name": "Happy Weather",
+    "description": "A weather app that loads current weather and imagery based on the user's location and time of day.",
+    "technologies": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Ajax", "Google Maps API"],
+    "live-url": "https://codepen.io/ogdendavis/full/mpOgVB/",
+    "repo-url": "https://codepen.io/ogdendavis/pen/mpOgVB",
     "image-monitor": "",
     "image-phone": ""
   }
