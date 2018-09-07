@@ -1,0 +1,16 @@
+.portfolio {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.sorter {
+  /* Container for technology selector */
+}
+
+.sorter--list {
+  /* ul of technologies */
+}
+
+.sorter--list--item {
+  /* each li, listing one technology */
+}

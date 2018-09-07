@@ -29,7 +29,7 @@
   "calculator": {
     "name": "Simple Calculator",
     "description": "A JavaScript calculator with background changes based on time of day.",
-    "technologies": ["HTML", "CSS", "Bootstap", "jQuery"],
+    "technologies": ["HTML", "CSS", "Bootstrap", "jQuery"],
     "liveUrl": "https://ogdendavis.github.io/calculator/",
     "repoUrl": "https://github.com/ogdendavis/calculator",
     "imageMonitor": "images/portfolio/calculator-monitor.png",
