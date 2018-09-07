@@ -80,7 +80,7 @@ class PortfolioItem extends React.Component {
       return null;
     }
     return (
-      <section key={this.props.name + 'Section'}>
+      <section className="portfolio--item" key={this.props.name + 'Section'}>
         <h2>{this.props.name}</h2>
         <p>{this.props.description}</p>
         <p>Technologies used:</p>
@@ -101,12 +101,16 @@ class Portfolio extends React.Component {
     super(props);
     this.state = {
       allTech: [],
-      activeTech: []
+      activeTech: [],
+      sorterVisible: false
     }
-    this.drawPortfolio = this.drawPortfolio.bind(this);
-    this.listTechnologies = this.listTechnologies.bind(this);
+    this.drawSorter = this.drawSorter.bind(this);
+    this.drawProjects = this.drawProjects.bind(this);
     this.toggleTech = this.toggleTech.bind(this);
     this.checkActiveTech = this.checkActiveTech.bind(this);
+    this.showTechToggles = this.showTechToggles.bind(this);
+    this.hideTechToggles = this.hideTechToggles.bind(this);
+    this.handleSorterButtonClick = this.handleSorterButtonClick.bind(this);
   }
 
   componentDidMount() {
@@ -127,19 +131,22 @@ class Portfolio extends React.Component {
     });
   }
 
-  listTechnologies() {
+  drawSorter(sorterVisible) {
     const techToggles = this.state.allTech.map(tech => {
       return (
         <li className="sorter--list--item" id={tech + 'Toggle'} key={tech + 'Toggle'} onClick={this.toggleTech}>{tech}</li>
       );
     });
 
+    const sorter = !sorterVisible ? null :
+    <ul className="sorter--list">
+      {techToggles}
+    </ul>;
+
     return (
       <div className="sorter">
-        Click to see only projects that use:
-        <ul className="sorter--list">
-          {techToggles}
-        </ul>
+        <button className="sorter--button" onClick={this.handleSorterButtonClick}>Filter projects by technology</button>
+        {sorter}
       </div>
     );
   }
@@ -156,12 +163,31 @@ class Portfolio extends React.Component {
     }
   }
 
+  handleSorterButtonClick(event) {
+    if (this.state.sorterVisible === false) {
+      this.showTechToggles(event);
+    } else if (this.state.sorterVisible === true){
+      this.hideTechToggles(event);
+    }
+  }
+
+  showTechToggles(event) {
+    this.setState({ sorterVisible: true });
+    document.querySelector('.sorter--button').innerText = 'Hide list';
+    window.setTimeout(() => {window.addEventListener('click', this.hideTechToggles, {once: true})}, 100);
+  }
+
+  hideTechToggles(event) {
+    this.setState({ sorterVisible: false });
+    document.querySelector('.sorter--button').innerText = 'Filter projects by technology';
+  }
+
   checkActiveTech(projectTech) {
     const activeTech = this.state.activeTech;
     return projectTech.some(tech => activeTech.includes(tech) );
   }
 
-  drawPortfolio() {
+  drawProjects() {
     const projects = this.props.projects;
     const result = [];
     for (let project in projects) {
@@ -175,8 +201,10 @@ class Portfolio extends React.Component {
   render() {
     return (
       <div className="portfolio">
-        {this.listTechnologies()}
-        {this.drawPortfolio()}
+        <img className="heading--image" src="images/lucas-on-trike-small.jpg" alt="Lucas on a small tricycle" />
+        <h1 className="heading">My Portfolio</h1>
+        {this.drawSorter(this.state.sorterVisible)}
+        {this.drawProjects()}
       </div>
     );
   }

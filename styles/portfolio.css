@@ -3,14 +3,53 @@
   width: 100%;
 }
 
+.heading--image {
+  border-radius: 50%;
+  float: right;
+  margin: 1em;
+  width: 15vw;
+  max-width: 100px;
+}
+
 .sorter {
   /* Container for technology selector */
 }
 
-.sorter--list {
-  /* ul of technologies */
+.sorter--button {
+  /* Button to toggle visibility of tech list */
+  background: none;
+  border: none;
+  border-radius: var(--rounded);
+  color: var(--link-color);
+  font-size: 0.75em;
+  padding: 0;
+  text-align: left;
+  text-decoration: underline;
 }
 
-.sorter--list--item {
+.sorter--button:hover {
+  cursor: pointer;
+}
+
+.sorter--list {
+  /* ul of technologies */
+  background: var(--visited-color);
+  border-radius: var(--rounded);
+  color: var(--bg-color);
+  display: block;
+  line-height: 1.75em;
+  list-style: none;
+  margin-top: 0.25em;
+  padding: 1em 2em;
+  position: absolute;
+  text-decoration: underline;
+}
+
+.sorter--list--item:hover {
   /* each li, listing one technology */
+  cursor: pointer;
+}
+
+.portfolio--item {
+  /* container for each individual featured project */
 }
