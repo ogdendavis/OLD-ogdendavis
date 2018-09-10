@@ -4,7 +4,6 @@ body {
   --bg-color: #4ABDAC;
   --bg-blue-transparent: radial-gradient(rgba(74,189,172,1),rgba(74,189,172,0.8));
   --bg-orange-transparent: linear-gradient(rgba(255,239,208,0.3), rgba(255,214,131,0.4));
-  --bg-orange-light-transparent: linear-gradient(rgba(255,239,208,0.1), rgba(255,214,131,0.2));
   --emphasis-color: #FC4A1A;
   --link-color: #FFD683;
   --rounded: 0.2em;
@@ -117,29 +116,26 @@ h2 {
   }
 
   .nav--list--image__about {
-    background: var(--bg-orange-light-transparent), url('../images/lucas-in-park-thumbnail.jpg') 0 0/cover;
+    background: url('../images/lucas-in-park-thumbnail.jpg') 0 0/cover;
   }
 
   .nav--list--item:hover .nav--list--image__about {
-    background: url('../images/lucas-in-park-thumbnail.jpg') 0 0/cover;
     box-shadow: 0 0 1.5em var(--text-color);
   }
 
   .nav--list--image__projects {
-    background: var(--bg-orange-light-transparent), url('../images/code-image.jpg') 0 0/cover;
+    background: url('../images/code-image.jpg') 0 0/cover;
   }
 
   .nav--list--item:hover .nav--list--image__projects {
-    background: url('../images/code-image.jpg') 0 0/cover;
     box-shadow: 0 0 1.5em var(--text-color);
   }
 
   .nav--list--image__blog {
-    background: var(--bg-orange-light-transparent), url('../images/book-image.jpg') 0 0/cover;
+    background: url('../images/book-image.jpg') 0 0/cover;
   }
 
   .nav--list--item:hover .nav--list--image__blog {
-    background: url('../images/book-image.jpg') 0 0/cover;
     box-shadow: 0 0 1.5em var(--text-color);
   }
 
