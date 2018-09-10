@@ -117,8 +117,10 @@ class PortfolioItem extends React.Component {
           onTouchEnd={() => {window.setTimeout(this.hideDetails, 500)}}
         >
           {this.makeDetails()}
-          <img src={this.props.imageMonitor} className="portfolio--image portfolio--image__landscape"/>
-          <img src={this.props.imagePhone} className="portfolio--image portfolio--image__portrait"/>
+          <a href={this.props.liveUrl} target="_blank">
+            <img src={this.props.imageMonitor} className="portfolio--image portfolio--image__landscape"/>
+            <img src={this.props.imagePhone} className="portfolio--image portfolio--image__portrait"/>
+          </a>
         </div>
       </section>
     );
