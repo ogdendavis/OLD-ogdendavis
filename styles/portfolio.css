@@ -1,4 +1,4 @@
-.portfolio {
+.portfolio--container {
   box-sizing: border-box;
   width: 100%;
 }
@@ -33,23 +33,125 @@
 
 .sorter--list {
   /* ul of technologies */
-  background: var(--visited-color);
+  background: var(--bg-color-dark-to-very-dark);
   border-radius: var(--rounded);
-  color: var(--bg-color);
+  color: var(--text-color);
   display: block;
   line-height: 1.75em;
   list-style: none;
   margin-top: 0.25em;
   padding: 1em 2em;
   position: absolute;
-  text-decoration: underline;
+  width: 150px;
+  z-index: 2;
 }
 
 .sorter--list--item:hover {
   /* each li, listing one technology */
   cursor: pointer;
+  font-weight: 700;
+}
+
+.portfolio {
+  /* The part that houses the actual projects! */
+  background: var(--bg-orange-transparent);
+  border-radius: var(--rounded);
+  color: var(--bg-color-very-dark);
+  margin-top: 1em;
+  text-align: justify;
+}
+
+.heading__emphasis {
+  border-radius: var(--rounded);
+  padding: 0.5em 1em;
 }
 
 .portfolio--item {
   /* container for each individual featured project */
+  line-height: 1.25em;
+  margin-top: 2em;
+  position: relative; /* For positioning of phone screenshot image */
+}
+
+.portfolio--item:first-child {
+  margin-top: 0;
+}
+
+.portfolio--item-description {
+  margin: 1em 0.5em;
+}
+
+.portfolio--images {
+  /* Container for mouseover event */
+  position: relative;
+}
+
+.portfolio--image {
+  /* All portfolio images */
+  max-width: 100%;
+}
+
+.portfolio--image__landscape {
+  /* Portfolio images in landscape -- usually screen cap of project on monitor */
+  margin: 0 5%;
+  width: 90%;
+}
+
+.portfolio--image__portrait {
+  /* Portfolio images in portrait -- usually screen cap of project on phone */
+  bottom: -1em;
+  position: absolute;
+  right: 3vw;
+  width: 20vw;
+}
+
+.portfolio--details {
+  /* Container for tech list and links, which will be hidden until user mouses over */
+  background: var(--bg-color-dark-to-very-dark);
+  border-radius: var(--rounded);
+  color: var(--text-color);
+  list-style: none;
+  margin: 0 3%;
+  position: absolute;
+  top: 25%;
+  width: 94%;
+  z-index: 1;
+}
+
+.portfolio--links {
+  /* Links to repo and live demo of project */
+  font-weight: 700;
+  margin: 0;
+  padding: 1em 0 0 0;
+  text-align: center;
+}
+
+.portfolio--links li {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+
+.portfolio--tech-list {
+  /* List of technologies used in a project */
+  line-height: 1.1em;
+  list-style: none;
+  font-size: 0.75em;
+  margin: 0 0.5em;
+  padding: 1em;
+  text-align: center;
+}
+
+.portfolio--tech-list--heading {
+  /* First item in .portfolio--tech-list, acting as heading for the list */
+  font-weight: 700;
+}
+
+.portfolio--tech-list--item {
+  /* Each tech in the tech-list */
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.portfolio--tech-list--item:last-child {
+  margin-right: 0;
 }

@@ -50,9 +50,13 @@ class PortfolioItem extends React.Component {
     super(props);
     this.state = {
       active: this.props.active,
-      tech: this.props.technologies
+      tech: this.props.technologies,
+      detailsVisible: false
     }
     this.makeTechTags = this.makeTechTags.bind(this);
+    this.makeDetails = this.makeDetails.bind(this);
+    this.showDetails = this.showDetails.bind(this);
+    this.hideDetails = this.hideDetails.bind(this);
   }
 
   componentDidUpdate() {
@@ -65,14 +69,37 @@ class PortfolioItem extends React.Component {
     const techs = this.props.technologies;
     const tags = techs.map(tech => {
       return (
-        <li key={this.props.name + tech}>{tech}</li>
+        <li key={this.props.name + tech} className="portfolio--tech-list--item">{tech}</li>
       )
     });
     return (
-      <ul>
+      <ul className="portfolio--tech-list">
+        <li className="portfolio--tech-list--heading">Technologies used:</li>
         {tags}
       </ul>
     )
+  }
+
+  makeDetails() {
+    if (!this.state.detailsVisible) {
+      return null;
+    }
+    return (
+      <div className="portfolio--details">
+        <ul className="portfolio--links">
+          <li><a href={this.props.liveUrl} target="_blank">See live demo</a></li>
+          <li><a href={this.props.repoUrl} target="_blank">See code repo</a></li>
+        </ul>
+        {this.makeTechTags()}
+      </div>);
+  }
+
+  showDetails(event) {
+    this.setState({ detailsVisible: true });
+  }
+
+  hideDetails(event) {
+    this.setState({ detailsVisible: false });
   }
 
   render() {
@@ -81,16 +108,18 @@ class PortfolioItem extends React.Component {
     }
     return (
       <section className="portfolio--item" key={this.props.name + 'Section'}>
-        <h2>{this.props.name}</h2>
-        <p>{this.props.description}</p>
-        <p>Technologies used:</p>
-          {this.makeTechTags()}
-        <ul>
-          <li><a href={this.props.liveUrl}>See live demo</a></li>
-          <li><a href={this.props.repoUrl}>See code repo</a></li>
-        </ul>
-        <img src={this.props.imageMonitor} />
-        <img src={this.props.imagePhone} />
+        <h2 className="heading__emphasis">{this.props.name}</h2>
+        <p className="portfolio--item-description">{this.props.description}</p>
+        <div className="portfolio--images"
+          onMouseEnter={this.showDetails}
+          onMouseLeave= {this.hideDetails}
+          onTouchStart={this.showDetails}
+          onTouchEnd={() => {window.setTimeout(this.hideDetails, 500)}}
+        >
+          {this.makeDetails()}
+          <img src={this.props.imageMonitor} className="portfolio--image portfolio--image__landscape"/>
+          <img src={this.props.imagePhone} className="portfolio--image portfolio--image__portrait"/>
+        </div>
       </section>
     );
   }
@@ -195,12 +224,16 @@ class Portfolio extends React.Component {
         <PortfolioItem key={projects[project].name + "Item"} active={this.checkActiveTech(projects[project].technologies)} name={projects[project].name} description={projects[project].description} technologies={projects[project].technologies} liveUrl={projects[project].liveUrl} repoUrl={projects[project].repoUrl} imageMonitor={projects[project].imageMonitor} imagePhone={projects[project].imagePhone} />
       );
     }
-    return result;
+    return (
+      <div className="portfolio">
+        {result}
+      </div>
+      );
   }
 
   render() {
     return (
-      <div className="portfolio">
+      <div className="portfolio--container">
         <img className="heading--image" src="images/lucas-on-trike-small.jpg" alt="Lucas on a small tricycle" />
         <h1 className="heading">My Portfolio</h1>
         {this.drawSorter(this.state.sorterVisible)}

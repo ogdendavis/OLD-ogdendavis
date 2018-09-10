@@ -10,7 +10,7 @@
   },
   "googleClone": {
     "name": "Google Clone",
-    "description": "A clone of the Google homepage, with some added 'functionality'.",
+    "description": "A clone of the Google homepage and a results page, with some added 'functionality'.",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "liveUrl": "https://ogdendavis.github.io/google-clone/",
     "repoUrl": "https://github.com/ogdendavis/google-clone",
