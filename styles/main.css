@@ -13,19 +13,31 @@ body {
   --text-color: #DFDCE3;
   --transition-time: 0.5s;
   --visited-color: #FFEFD0;
-  background: var(--bg-color-transparent), url('../images/lucas-on-trike.jpg');
-  background-attachment: fixed;
-  background-position: 0 0;
-  background-size: cover;
   color: var(--text-color);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
 }
 
+body:after {
+	content: "";
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	display: block;
+	background: var(--bg-color-transparent), url('../images/lucas-on-trike.jpg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media only screen and (min-width: 640px) {
-  body {
+  body:after {
     background-position: 0 -100px;
+    bottom: -100px;
   }
 }
 
