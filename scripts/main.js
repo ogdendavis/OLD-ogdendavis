@@ -22,10 +22,9 @@ class Button extends React.Component {
   }
 
   render() {
-    console.log(window.location.toString());
     return (
       <button
-        className = {window.location.toString().endsWith('index.html' || '.com/') ? 'nav__button nav__button--home' : 'nav__button'}
+        className = {window.location.pathname === ('/index.html' || '/') ? 'nav__button nav__button--home' : 'nav__button'}
         onClick = {this.buttonClick}>
         {this.props.name}
         </button>
