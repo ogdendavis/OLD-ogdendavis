@@ -94,6 +94,9 @@ h2 {
   line-height: 2em;
   margin: 0.5em auto;
   padding: 0.5em 2em;
+}
+
+.nav--button--home {
   width: 163px;
 }
 
@@ -101,6 +104,7 @@ h2 {
   background: linear-gradient(var(--visited-color), #DBAE53);
   box-shadow: 0 0 1.5em var(--text-color);
   color: black;
+  cursor: pointer;
 }
 
 .nav--outside-links {
@@ -118,11 +122,13 @@ h2 {
   .nav--list--item {
     display: inline-block;
     margin: 0 1em;
+    padding-right: 1.5em;
   }
 
   .nav--list--image {
     box-sizing: border-box;
     border-radius: var(--rounded);
+    cursor: pointer;
     height: 163px;
     width: 163px;
   }

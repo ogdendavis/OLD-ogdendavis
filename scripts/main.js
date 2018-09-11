@@ -14,7 +14,6 @@ const navPages = [
 class Button extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { active: false };
     this.buttonClick = this.buttonClick.bind(this);
   }
 
@@ -22,16 +21,10 @@ class Button extends React.Component {
     window.location = this.props.url;
   }
 
-  componentWillMount() {
-    if (window.location.toString().endsWith(this.props.url) && !this.state.active) {
-      this.setState({ active: true });
-    }
-  }
-
   render() {
     return (
       <button
-        className = {this.state.active ? 'nav--button nav--button--active' : 'nav--button'}
+        className = {window.location.toString().endsWith('index.html' || '/') ? 'nav--button nav--button--home' : 'nav--button'}
         onClick = {this.buttonClick}>
         {this.props.name}
         </button>
@@ -64,7 +57,7 @@ class Nav extends React.Component {
       return this.state.pages.map(x => (
         <li key={x.name} className="nav--list--item">
           <Button name={x.name} url={x.url} />
-          <div className={`nav--list--image nav--list--image__${x.name.toLowerCase()}`} />
+          <div className={`nav--list--image nav--list--image__${x.name.toLowerCase()}`} onClick={() => {window.location=x.url}} />
         </li>
       ));
     }
