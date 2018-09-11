@@ -24,7 +24,7 @@ class Button extends React.Component {
   render() {
     return (
       <button
-        className = {window.location.pathname === ('/index.html' || '/') ? 'nav__button nav__button--home' : 'nav__button'}
+        className = {window.location.pathname !== ('/index.html' || '/') ? 'nav__button' : 'nav__button nav__button--home'}
         onClick = {this.buttonClick}>
         {this.props.name}
         </button>
