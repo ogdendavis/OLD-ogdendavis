@@ -114,7 +114,7 @@ class PortfolioItem extends React.Component {
           onMouseEnter={this.showDetails}
           onMouseLeave= {this.hideDetails}
           onTouchStart={this.showDetails}
-          onTouchEnd={() => {window.setTimeout(this.hideDetails, 500)}}
+          onTouchEnd={() => {window.setTimeout(this.hideDetails, 3000)}}
         >
           {this.makeDetails()}
           <a href={this.props.liveUrl} target="_blank">
