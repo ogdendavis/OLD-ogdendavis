@@ -14,6 +14,7 @@ const navPages = [
 class Button extends React.Component {
   constructor(props) {
     super(props);
+    this.state { home: false }
     this.buttonClick = this.buttonClick.bind(this);
   }
 
@@ -21,10 +22,16 @@ class Button extends React.Component {
     window.location = this.props.url;
   }
 
+  componentDidMount() {
+    if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+      this.setState( { home: true } );
+    }
+  }
+
   render() {
     return (
       <button
-        className = {window.location.pathname !== ('/index.html' || '/') ? 'nav__button' : 'nav__button nav__button--home'}
+        className = {this.state.home === true ? 'nav__button nav__button--home' : 'nav__button'}
         onClick = {this.buttonClick}>
         {this.props.name}
         </button>
