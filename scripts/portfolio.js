@@ -25,7 +25,7 @@ select/view combinations of technologies, instead of just being able to pick 1
 
 /* This uses a link to the projects.json file in the DEVELOPMENT branch on GitHub. When ready for release,
 switch it to finding the JSON object from ogdendavis.com */
-const requestUrl = 'https://raw.githubusercontent.com/ogdendavis/ogdendavis/development/store/projects.json';
+const requestUrl = './store/projects.json';
 const getJSON = new XMLHttpRequest();
 getJSON.open('GET', requestUrl, true);
 getJSON.responseType = 'json';
