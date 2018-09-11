@@ -16,7 +16,6 @@ body {
   background: var(--bg-color-transparent), url('../images/lucas-on-trike.jpg');
   background-attachment: fixed;
   background-position: 0 0;
-  background-size: 100vh;
   background-size: cover;
   color: var(--text-color);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
