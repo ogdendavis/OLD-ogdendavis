@@ -29,7 +29,6 @@ class Button extends React.Component {
   }
 
   render() {
-    console.log(window.location.pathname, this.state.home);
     return (
       <button
         className = {this.state.home === true ? 'nav__button nav__button--home' : 'nav__button'}
