@@ -2,7 +2,10 @@
 
 body {
   --bg-color: #4ABDAC;
-  --bg-blue-transparent: radial-gradient(rgba(74,189,172,1),rgba(74,189,172,0.8));
+  --bg-color-dark: #0E9683;
+  --bg-color-very-dark: #005E51;
+  --bg-color-transparent: radial-gradient(rgba(74,189,172,1),rgba(74,189,172,0.8));
+  --bg-color-dark-to-very-dark: radial-gradient(var(--bg-color-dark),var(--bg-color-very-dark));
   --bg-orange-transparent: linear-gradient(rgba(255,239,208,0.3), rgba(255,214,131,0.4));
   --emphasis-color: #FC4A1A;
   --link-color: #FFD683;
@@ -10,11 +13,20 @@ body {
   --text-color: #DFDCE3;
   --transition-time: 0.5s;
   --visited-color: #FFEFD0;
-  background: var(--bg-blue-transparent), url('../images/lucas-on-trike.jpg') 0 0/cover;
+  background: var(--bg-color-transparent), url('../images/lucas-on-trike.jpg');
+  background-attachment: fixed;
+  background-position: 0 0;
+  background-size: cover;
   color: var(--text-color);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
+}
+
+@media only screen and (min-width: 640px) {
+  body {
+    background-position: 0 -100px;
+  }
 }
 
 a {
@@ -45,7 +57,7 @@ h2 {
   font-weight: 700;
 }
 
-.header__emphasis {
+.heading__emphasis {
   background: var(--emphasis-color);
   color: var(--text-color);
   margin: 0.5em auto;
@@ -238,8 +250,9 @@ h2 {
 /* Main (for simple pages on mobile) */
 
 .main {
+  background: linear-gradient(rgba(14,150,131,0.5),rgba(14,150,131,0.5));
   margin: auto;
-  width: 90vw;
+  padding: 1em;
 }
 
 .main__centered {
@@ -302,11 +315,9 @@ h2 {
 
 @media only screen and (min-width: 640px) {
   .main {
-    background: linear-gradient(rgba(14,150,131,0.5),rgba(14,150,131,0.5));
     border-radius: var(--rounded);
     margin-top: 2em;
     max-width: 640px;
-    padding: 1em;
     text-align: justify;
   }
 
