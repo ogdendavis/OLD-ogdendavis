@@ -23,8 +23,6 @@ select/view combinations of technologies, instead of just being able to pick 1
 
 'use strict';
 
-/* This uses a link to the projects.json file in the DEVELOPMENT branch on GitHub. When ready for release,
-switch it to finding the JSON object from ogdendavis.com */
 const requestUrl = './store/projects.json';
 const getJSON = new XMLHttpRequest();
 getJSON.open('GET', requestUrl, true);
@@ -69,12 +67,12 @@ class PortfolioItem extends React.Component {
     const techs = this.props.technologies;
     const tags = techs.map(tech => {
       return (
-        <li key={this.props.name + tech} className="portfolio--tech-list--item">{tech}</li>
+        <li key={this.props.name + tech} className="portfolio__tech-list__item">{tech}</li>
       )
     });
     return (
-      <ul className="portfolio--tech-list">
-        <li className="portfolio--tech-list--heading">Technologies used:</li>
+      <ul className="portfolio__tech-list">
+        <li className="portfolio__tech-list__heading">Technologies used:</li>
         {tags}
       </ul>
     )
@@ -85,8 +83,8 @@ class PortfolioItem extends React.Component {
       return null;
     }
     return (
-      <div className="portfolio--details">
-        <ul className="portfolio--links">
+      <div className="portfolio__details">
+        <ul className="portfolio__links">
           <li><a href={this.props.liveUrl} target="_blank">See live demo</a></li>
           <li><a href={this.props.repoUrl} target="_blank">See code repo</a></li>
         </ul>
@@ -107,10 +105,10 @@ class PortfolioItem extends React.Component {
       return null;
     }
     return (
-      <section className="portfolio--item" key={this.props.name + 'Section'}>
-        <h2 className="heading__emphasis">{this.props.name}</h2>
-        <p className="portfolio--item-description">{this.props.description}</p>
-        <div className="portfolio--images"
+      <section className="portfolio__item" key={this.props.name + 'Section'}>
+        <h2 className="heading--emphasis">{this.props.name}</h2>
+        <p className="portfolio__item-description">{this.props.description}</p>
+        <div className="portfolio__images"
           onMouseEnter={this.showDetails}
           onMouseLeave= {this.hideDetails}
           onTouchStart={this.showDetails}
@@ -118,8 +116,8 @@ class PortfolioItem extends React.Component {
         >
           {this.makeDetails()}
           <a href={this.props.liveUrl} target="_blank">
-            <img src={this.props.imageMonitor} className="portfolio--image portfolio--image__landscape"/>
-            <img src={this.props.imagePhone} className="portfolio--image portfolio--image__portrait"/>
+            <img src={this.props.imageMonitor} className="portfolio__image portfolio__image--landscape"/>
+            <img src={this.props.imagePhone} className="portfolio__image portfolio__image--portrait"/>
           </a>
         </div>
       </section>
@@ -165,18 +163,18 @@ class Portfolio extends React.Component {
   drawSorter(sorterVisible) {
     const techToggles = this.state.allTech.map(tech => {
       return (
-        <li className="sorter--list--item" id={tech + 'Toggle'} key={tech + 'Toggle'} onClick={this.toggleTech}>{tech}</li>
+        <li className="sorter__list__item" id={tech + 'Toggle'} key={tech + 'Toggle'} onClick={this.toggleTech}>{tech}</li>
       );
     });
 
     const sorter = !sorterVisible ? null :
-    <ul className="sorter--list">
+    <ul className="sorter__list">
       {techToggles}
     </ul>;
 
     return (
       <div className="sorter">
-        <button className="sorter--button" onClick={this.handleSorterButtonClick}>Filter projects by technology</button>
+        <button className="sorter__button" onClick={this.handleSorterButtonClick}>Filter projects by technology</button>
         {sorter}
       </div>
     );
@@ -235,8 +233,8 @@ class Portfolio extends React.Component {
 
   render() {
     return (
-      <div className="portfolio--container">
-        <img className="heading--image" src="images/lucas-on-trike-small.jpg" alt="Lucas on a small tricycle" />
+      <div className="portfolio__container">
+        <img className="heading__image" src="images/lucas-on-trike-small.jpg" alt="Lucas on a small tricycle" />
         <h1 className="heading">My Portfolio</h1>
         {this.drawSorter(this.state.sorterVisible)}
         {this.drawProjects()}

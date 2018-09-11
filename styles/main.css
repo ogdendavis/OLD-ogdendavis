@@ -58,8 +58,6 @@ figure {
 }
 
 h1 {
-  font-size: 2em;
-  font-weight: 900;
   margin: 0;
   padding: 0.5em 0.1em;
 }
@@ -69,35 +67,43 @@ h2 {
   font-weight: 700;
 }
 
-.heading__emphasis {
+/* Header & Nav */
+/* Default -- for index.html on mobile */
+
+.heading--homepage {
+  font-size: 4em;
+  margin: 0.1em auto 0 auto;
+  padding: 0;
+  text-shadow: 1px 1px 2px rgba(2,2,2,0.5);
+}
+
+.heading--emphasis {
   background: var(--emphasis-color);
   color: var(--text-color);
   margin: 0.5em auto;
 }
 
-/* Header & Nav */
-/* Default -- for index.html on mobile */
 .nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0;
   position: absolute;
-  top: 10em;
+  top: 18em;
   width: 100%;
 }
 
-.nav--list {
+.nav__list {
   list-style: none;
   margin: 0 auto;
   padding: 0;
 }
 
-.nav--list--item {
+.nav__list__item {
   text-align: center;
 }
 
-.nav--button {
+.nav__button {
   background: linear-gradient(var(--visited-color), var(--link-color));
   border: 0;
   border-radius: var(--rounded);
@@ -108,18 +114,18 @@ h2 {
   padding: 0.5em 2em;
 }
 
-.nav--button--home {
+.nav__button--home {
   width: 163px;
 }
 
-.nav--list--item:hover .nav--button {
+.nav__list__item:hover .nav__button {
   background: linear-gradient(var(--visited-color), #DBAE53);
   box-shadow: 0 0 1.5em var(--text-color);
   color: black;
   cursor: pointer;
 }
 
-.nav--outside-links {
+.nav__outside-links {
   font-size: 0.75em;
   line-height: 2em;
   margin: auto;
@@ -131,13 +137,21 @@ h2 {
 /* Header & Nav in index on desktop */
 
 @media only screen and (min-width: 640px) {
-  .nav--list--item {
+  .heading--homepage {
+    margin-top: 0.75em;
+  }
+  
+  .nav {
+    top: 13em;
+  }
+  
+  .nav__list__item {
     display: inline-block;
     margin: 0 1em;
     padding-right: 1.5em;
   }
 
-  .nav--list--image {
+  .nav__list__image {
     box-sizing: border-box;
     border-radius: var(--rounded);
     cursor: pointer;
@@ -145,31 +159,31 @@ h2 {
     width: 163px;
   }
 
-  .nav--list--image__about {
+  .nav__list__image--about {
     background: url('../images/lucas-in-park-thumbnail.jpg') 0 0/cover;
   }
 
-  .nav--list--item:hover .nav--list--image__about {
+  .nav__list__item:hover .nav__list__image--about {
     box-shadow: 0 0 1.5em var(--text-color);
   }
 
-  .nav--list--image__projects {
+  .nav__list__image--projects {
     background: url('../images/code-image.jpg') 0 0/cover;
   }
 
-  .nav--list--item:hover .nav--list--image__projects {
+  .nav__list__item:hover .nav__list__image--projects {
     box-shadow: 0 0 1.5em var(--text-color);
   }
 
-  .nav--list--image__blog {
+  .nav__list__image--blog {
     background: url('../images/book-image.jpg') 0 0/cover;
   }
 
-  .nav--list--item:hover .nav--list--image__blog {
+  .nav__list__item:hover .nav__list__image--blog {
     box-shadow: 0 0 1.5em var(--text-color);
   }
 
-  .nav--outside-links {
+  .nav__outside-links {
     margin-top: 3em;
     width: 585px;
   }
@@ -184,7 +198,7 @@ h2 {
   top: 0;
 }
 
-.nav--toggle {
+.nav__toggle {
   display: inline-block;
   font-size: 2em;
   font-weight: 700;
@@ -196,11 +210,11 @@ h2 {
   -webkit-transition: var(--transition-time);
 }
 
-.nav--toggle:hover {
+.nav__toggle:hover {
   cursor: pointer;
 }
 
-.nav--toggle__expand {
+.nav__toggle--expand {
   transform: rotate(-90deg);
   transition: var(--transition-time);
   -moz-transition: var(--transition-time);
@@ -209,7 +223,7 @@ h2 {
   -webkit-transition: var(--transition-time);
 }
 
-.nav--list__collapse {
+.nav__list--collapse {
   list-style: none;
   margin: 0;
   height: 2.75em;
@@ -222,7 +236,7 @@ h2 {
   -webkit-transition: var(--transition-time);
 }
 
-.nav--list__expand {
+.nav__list--expand {
   height: 13em;
   transition: var(--transition-time);
   -moz-transition: var(--transition-time);
@@ -231,11 +245,11 @@ h2 {
   -webkit-transition: var(--transition-time);
 }
 
-.nav--list__collapse .nav--list--item {
+.nav__list--collapse .nav__list__item {
   text-align: left;
 }
 
-.nav--list__collapse .nav--button {
+.nav__list--collapse .nav__button {
   background: none;
   text-align: left;
   margin: 0;
@@ -243,14 +257,14 @@ h2 {
   width: fit-content;
 }
 
-.nav--list__collapse .nav--list--item:hover .nav--button {
+.nav__list--collapse .nav__list__item:hover .nav__button {
   background: none;
   box-shadow: none;
   color: black;
   text-shadow: 0 0 1em white;
 }
 
-.nav--outside-links__header {
+.nav__outside-links--header {
   font-size: 0.75em;
   line-height: 1.5em;
   padding: 0.25em;
@@ -273,15 +287,15 @@ h2 {
   padding: 1em;
 }
 
-.main__centered {
+.main--centered {
   text-align: center;
 }
 
-.main--article {
+.main__article {
   line-height: 1.5em;
 }
 
-.article--figure {
+.article__figure {
   box-sizing: border-box;
   margin: 1em auto;
   padding: 0 5%;
@@ -289,28 +303,28 @@ h2 {
   max-width: 326px;
 }
 
-.article--figure__wide {
+.article__figure--wide {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
-.figure--image {
+.figure__image {
   border-radius: var(--rounded);
   display: block;
   margin: auto;
   width: 90%;
 }
 
-.figure--image__wide {
+.figure__image--wide {
   border-radius: var(--rounded);
   display: block;
   margin: auto;
   width: 100%;
 }
 
-.figure--caption {
+.figure__caption {
   display: block;
   font-size: 0.75em;
   font-style: italic;
@@ -319,7 +333,7 @@ h2 {
   width: 90%;
 }
 
-.figure--caption__wide {
+.figure__caption--wide {
   display: block;
   font-size: 0.75em;
   font-style: italic;
@@ -339,11 +353,11 @@ h2 {
     text-align: justify;
   }
 
-  .main--article p {
+  .main__article p {
     margin-bottom: 2em;
   }
 
-  .article--figure__right {
+  .article__figure--right {
     float: right;
     margin: 0 0 1em 1em;
     padding: 0;

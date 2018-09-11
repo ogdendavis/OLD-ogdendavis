@@ -24,7 +24,7 @@ class Button extends React.Component {
   render() {
     return (
       <button
-        className = {window.location.toString().endsWith('index.html' || '/') ? 'nav--button nav--button--home' : 'nav--button'}
+        className = {window.location.toString().endsWith('index.html' || '/') ? 'nav__button nav__button--home' : 'nav__button'}
         onClick = {this.buttonClick}>
         {this.props.name}
         </button>
@@ -50,14 +50,14 @@ class Nav extends React.Component {
     const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     if (width < 640 || (width >= 640 && this.state.home === false)) {
       return this.state.pages.map(x => (
-        <li key={x.name} className="nav--list--item"><Button name={x.name} url={x.url} /></li>
+        <li key={x.name} className="nav__list__item"><Button name={x.name} url={x.url} /></li>
       ));
     }
     else {
       return this.state.pages.map(x => (
-        <li key={x.name} className="nav--list--item">
+        <li key={x.name} className="nav__list__item">
           <Button name={x.name} url={x.url} />
-          <div className={`nav--list--image nav--list--image__${x.name.toLowerCase()}`} onClick={() => {window.location=x.url}} />
+          <div className={`nav__list__image nav__list__image--${x.name.toLowerCase()}`} onClick={() => {window.location=x.url}} />
         </li>
       ));
     }
@@ -69,8 +69,8 @@ class Nav extends React.Component {
       return null;
     }
     return this.state.navHide ?
-      (<div className="nav--toggle" onClick={this.toggleNavHide}> > </div>) :
-      (<div className="nav--toggle nav--toggle__expand" onClick={this.toggleNavHide}> > </div>)
+      (<div className="nav__toggle" onClick={this.toggleNavHide}> > </div>) :
+      (<div className="nav__toggle nav__toggle--expand" onClick={this.toggleNavHide}> > </div>)
   }
 
   toggleNavHide() {
@@ -99,12 +99,12 @@ class Nav extends React.Component {
   render() {
     return (
       <nav className={this.state.home ? 'nav' : 'nav__header'}>
-        <ul className={this.state.home ? 'nav--list' :
-                       this.state.navHide ? 'nav--list__collapse' : 'nav--list__collapse nav--list__expand'}>
+        <ul className={this.state.home ? 'nav__list' :
+                       this.state.navHide ? 'nav__list--collapse' : 'nav__list--collapse nav__list--expand'}>
           {this.pickNav()}
           {this.buttonize()}
         </ul>
-        <div className={this.state.home ? 'nav--outside-links' : 'nav--outside-links__header'}>
+        <div className={this.state.home ? 'nav__outside-links' : 'nav__outside-links--header'}>
           <a href="https://github.com/ogdendavis" target="_blank">GitHub</a>
           <br />
           <a href="https://codepen.io/ogdendavis" target="_blank">CodePen</a>

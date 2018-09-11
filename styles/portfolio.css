@@ -1,9 +1,9 @@
-.portfolio--container {
+.portfolio__container {
   box-sizing: border-box;
   width: 100%;
 }
 
-.heading--image {
+.heading__image {
   border-radius: 50%;
   float: right;
   margin: 1em;
@@ -15,7 +15,7 @@
   /* Container for technology selector */
 }
 
-.sorter--button {
+.sorter__button {
   /* Button to toggle visibility of tech list */
   background: none;
   border: none;
@@ -27,11 +27,11 @@
   text-decoration: underline;
 }
 
-.sorter--button:hover {
+.sorter__button:hover {
   cursor: pointer;
 }
 
-.sorter--list {
+.sorter__list {
   /* ul of technologies */
   background: var(--bg-color-dark-to-very-dark);
   border-radius: var(--rounded);
@@ -46,7 +46,7 @@
   z-index: 2;
 }
 
-.sorter--list--item:hover {
+.sorter__list__item:hover {
   /* each li, listing one technology */
   cursor: pointer;
   font-weight: 700;
@@ -59,12 +59,12 @@
   text-align: justify;
 }
 
-.heading__emphasis {
+.heading--emphasis {
   border-radius: var(--rounded);
   padding: 0.5em 1em;
 }
 
-.portfolio--item {
+.portfolio__item {
   /* container for each individual featured project */
   background: var(--bg-orange-transparent);
   border-radius: var(--rounded);
@@ -74,32 +74,32 @@
   position: relative; /* For positioning of phone screenshot image */
 }
 
-.portfolio--item:first-child {
+.portfolio__item:first-child {
   margin-top: 0;
 }
 
-.portfolio--item-description {
+.portfolio__item-description {
   margin: 1em 0.5em;
 }
 
-.portfolio--images {
+.portfolio__images {
   /* Container for mouseover event */
   position: relative;
 }
 
-.portfolio--image {
+.portfolio__image {
   /* All portfolio images */
   max-width: 100%;
 }
 
-.portfolio--image__landscape {
+.portfolio__image--landscape {
   /* Portfolio images in landscape -- usually screen cap of project on monitor */
   margin: 0 5%;
   width: 90%;
   max-width: 500px;
 }
 
-.portfolio--image__portrait {
+.portfolio__image--portrait {
   /* Portfolio images in portrait -- usually screen cap of project on phone */
   bottom: -1em;
   position: absolute;
@@ -108,7 +108,7 @@
   max-width: 150px;
 }
 
-.portfolio--details {
+.portfolio__details {
   /* Container for tech list and links, which will be hidden until user mouses over */
   background: var(--bg-color-dark-to-very-dark);
   border-radius: var(--rounded);
@@ -125,7 +125,7 @@
   z-index: 1;
 }
 
-.portfolio--links {
+.portfolio__links {
   /* Links to repo and live demo of project */
   font-weight: 700;
   line-height: 2em;
@@ -134,11 +134,11 @@
   text-align: center;
 }
 
-.portfolio--links li {
+.portfolio__links li {
     display: block;
 }
 
-.portfolio--tech-list {
+.portfolio__tech-list {
   /* List of technologies used in a project */
   line-height: 1.1em;
   list-style: none;
@@ -148,29 +148,29 @@
   text-align: center;
 }
 
-.portfolio--tech-list--heading {
+.portfolio__tech-list__heading {
   /* First item in .portfolio--tech-list, acting as heading for the list */
   font-weight: 700;
 }
 
-.portfolio--tech-list--item {
+.portfolio__tech-list__item {
   /* Each tech in the tech-list */
   display: inline-block;
   margin-right: 1em;
 }
 
-.portfolio--tech-list--item:last-child {
+.portfolio__tech-list__item:last-child {
   margin-right: 0;
 }
 
 /* Style overrides for computers/landscape tablets */
 
 @media only screen and (min-width: 640px) {
-  .heading--image {
+  .heading__image {
     margin-top: 0;
   }
 
-  .portfolio--details {
+  .portfolio__details {
     margin: 0 20%;
     width: 60%;
   }
