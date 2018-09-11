@@ -1,7 +1,7 @@
 {
   "roguelike": {
     "name": "Roguelike Game",
-    "description": "An in-browser game in which players explore the 'hospital', clean messes, and defeat the boss!",
+    "description": "An in-browser game in which players explore the “hospital,” clean messes, and defeat the boss! Built in React, using Redux to manage random map generation and game logic. SCSS variables and nesting are used to keep styles easily readable, and a simple media query makes the game usable on mobile devices, as well.",
     "technologies": ["HTML", "SCSS", "JavaScript", "React", "Redux"],
     "liveUrl": "https://ogdendavis.github.io/roguelike/",
     "repoUrl": "https://github.com/ogdendavis/roguelike",
@@ -10,7 +10,7 @@
   },
   "googleClone": {
     "name": "Google Clone",
-    "description": "A clone of the Google homepage and a results page, with some added 'functionality'.",
+    "description": "A clone of the Google homepage and a results page, with some added “functionality.” The pages themselves are built in pure HTML5 and CSS, and a dab of vanilla JavaScript is used to create a little bit of fun with the search. SVG icons were customized for this project, as well.",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "liveUrl": "https://ogdendavis.github.io/google-clone/",
     "repoUrl": "https://github.com/ogdendavis/google-clone",
@@ -19,7 +19,7 @@
   },
   "androidLogo": {
     "name": "CSS Android",
-    "description": "An Android logo with custom animations.",
+    "description": "An Android logo with custom animations. No JavaScript was used for this project -- all animations were created with CSS pseudo-classes. This project was based on a tutorial, but has been expanded well beyond the original functionality.",
     "technologies": ["HTML", "CSS"],
     "liveUrl": "https://ogdendavis.github.io/android-logo/",
     "repoUrl": "https://github.com/ogdendavis/android-logo",
@@ -28,8 +28,8 @@
   },
   "calculator": {
     "name": "Simple Calculator",
-    "description": "A JavaScript calculator with background changes based on time of day.",
-    "technologies": ["HTML", "CSS", "Bootstrap", "jQuery"],
+    "description": "A simple-but-awesome JavaScript calculator that works just like the one sitting in your desk drawer. The calculator functionality and time-of-day background change are written in vanilla JavaScript. Bootstrap's grid system is used for the calculator display, and a simple media query modifies the calculator's position and size to make it usable on mobile devices.",
+    "technologies": ["HTML", "CSS", "Bootstrap", "JavaScript"],
     "liveUrl": "https://ogdendavis.github.io/calculator/",
     "repoUrl": "https://github.com/ogdendavis/calculator",
     "imageMonitor": "images/portfolio/calculator-monitor.png",
@@ -37,7 +37,7 @@
   },
   "gameOfLife": {
     "name": "Game of Life",
-    "description": "A React implementation of Conway's Game of Life.",
+    "description": "A React implementation of Conway's Game of Life. A combination of Class Components and Stateless Functional Components are used to render the game and generate the life cycle of the cells. Styling is currently implemented in nested SCSS, but a change to vanilla CSS may improve load time and game speed.",
     "technologies": ["SCSS", "JavaScript", "React"],
     "liveUrl": "https://codepen.io/ogdendavis/full/LQXgZZ/",
     "repoUrl": "https://codepen.io/ogdendavis/pen/LQXgZZ",
@@ -46,8 +46,8 @@
   },
   "heatMap": {
     "name": "Literal Heat Map",
-    "description": "A visual representation of global monthly temperatures from 1753 to 2015.",
-    "technologies": ["HTML", "CSS", "JavaScript", "D3"],
+    "description": "A visual representation of global monthly temperatures from 1753 to 2015. An asynchronous AJAX request is sent after the page loads to get temperature data from a third party in the form of a JSON object. D3 is used to handle the translation of that data into visual representation, and the page is redrawn whenever the window is resized, so that all data fits on the screen at all times.",
+    "technologies": ["HTML", "CSS", "JavaScript", "D3", "JSON", "AJAX"],
     "liveUrl": "https://codepen.io/ogdendavis/full/yjJNGw/",
     "repoUrl": "https://codepen.io/ogdendavis/pen/yjJNGw",
     "imageMonitor": "images/portfolio/heatMap-monitor.png",
@@ -55,7 +55,7 @@
   },
   "simon": {
     "name": "Simon Game",
-    "description": "An in-browser version of the classic kid's game, with requisite 80's nostalgia.",
+    "description": "An in-browser version of the classic kid's game, with requisite 80's nostalgia. The CSS is organized using BEM naming conventions, and game state is managed using global variables in vanilla JavaScript. The JavaScript Audio Object is also used to play game sounds.",
     "technologies": ["HTML", "CSS", "jQuery", "Bootstrap"],
     "liveUrl": "https://codepen.io/ogdendavis/full/bLGGxZ/",
     "repoUrl": "https://codepen.io/ogdendavis/pen/bLGGxZ",
@@ -64,8 +64,8 @@
   },
   "weather": {
     "name": "Happy Weather",
-    "description": "A weather app that loads current weather and imagery based on the user's location and time of day.",
-    "technologies": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Ajax", "Google Maps API"],
+    "description": "A weather app that loads current weather and imagery based on the user's location and time of day. The weather is loaded from a third-party API using jQuery's $get and $(document).ready to retrieve the JSON object. The Google Maps API is used to allow users to view weather at a different location, and for users whose browsers do not support location detection.",
+    "technologies": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "AJAX", "Google Maps API"],
     "liveUrl": "https://codepen.io/ogdendavis/full/mpOgVB/",
     "repoUrl": "https://codepen.io/ogdendavis/pen/mpOgVB",
     "imageMonitor": "images/portfolio/weather-monitor.png",
