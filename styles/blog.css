@@ -1,0 +1,11 @@
+.blog {
+  /* Class applied to "main" for blog.html */
+}
+
+.blog__header {
+  /* Title and overall info for blog */
+}
+
+.blog__post {
+  /* <article> for each blog post */
+}

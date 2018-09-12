@@ -5,8 +5,8 @@
 const navPages = [
   {name: 'Home', url:'index.html'},
   {name: 'About', url: 'about.html'},
-  {name: 'Projects', url: 'projects.html'},
-  {name: 'Blog', url: 'blog.html'}
+  {name: 'Projects', url: 'projects.html'}/*,
+  {name: 'Blog', url: 'blog.html'}*/
 ];
 
 // And now for the components
