@@ -1,0 +1,23 @@
+{
+  "001": {
+    "title": "A Newbie's CSS Workflow Trick",
+    "image": "images/blog/Firefox-styleEditor.png",
+    "imageOrientation": "landscape",
+    "snippet": "A simple discovery in Firefox's Style Editor -- which I probably should’ve found long ago -- helped me significantly speed up my CSS writing and debugging process.",
+    "fullText": "
+    <p>
+    When I’m working on a front-end project, I’m almost always working with files stored locally, doing everything from project setup to final debugging on my trusty little laptop. I don’t have a fancy dual-screen workstation, so I’m constantly switching between windows -- from my terminal to my text editor to my browser, back to my text editor, etc, etc.
+    </p><p>
+    One of the most annoying pieces of front-end development in this workflow, which I think is a typical pattern for many beginning front-end developers or professionals working remotely, is writing and debugging my CSS. Or rather, this was annoying until I found out that Firefox’s Style Editor can almost completely eliminate this pain point for me.
+    </p><p>
+    Here’s what I used to do when writing my CSS: First, I’d apply styling classes to my HTML or JSX and link a fresh stylesheet. Then. I’d open up the new CSS file in my text editor and apply the rules that I thought would style my content how I wanted it. I’d save my work, open up the project in a browser, and see how it looked. I’d either experiment with changes in the inspector or just eyeball the adjustments I needed to make, and then I’d then go back to the text editor and make the edits. I’d repeat ad nauseum until the styling was correct, clicking back and forth between my text editor and my browser over and over again… It was a frustratingly slow and clumsy process.
+    </p><p>
+    But then I discovered something that most experienced developers probably take for granted: If you’re modifying a locally-saved stylesheet in Firefox’s Style Editor, you can save your changes to that stylesheet directly from Firefox. It’s not even hard -- all you have to do is hit ctrl-s or cmd-s while you have the stylesheet selected, or just click the handy-dandy “Save” link that pops up next to the filename in the Style Editor window. That’s it. It’s so simple, and so powerful, and it saves me so much time when I’m debugging some weird CSS issue.
+    </p><p>
+    However, with great power comes great responsibility. If you’re in the habit of hitting save frequently as you work, editing your CSS from the Style Editor can be risky. It’s hard to backtrack changes that you’ve made from the Style Editor -- you can’t just hit “undo” like you can in your text editor. And if, like me, you’re used to experimenting in your browser’s Dev Tools, knowing that you can just reload the page if you screw things up too badly, you could accidentally end up saving a CSS file that has all sorts of exotic rules written in, and that you can’t easily revert back to the previous version.
+    </p><p>
+    Despite the dangers, if you’re a front-end developer who does your coding locally on a single-monitor machine, writing and saving your CSS from within the Firefox Style Editor can really speed up the styling process, saving you a huge amount of time and frustration. So give it a shot!
+    </p>
+    "
+  }
+}
