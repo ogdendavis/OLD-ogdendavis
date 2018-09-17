@@ -110,11 +110,21 @@ class ThumbPost extends React.Component {
 class FullPost extends React.Component {
   constructor(props) {
     super(props);
+    this.scrollRef = React.createRef();
+  }
+
+  componentDidMount() {
+    console.log(this.scrollRef.current);
+    window.scrollTo({
+      top: this.scrollRef.current.offsetTop-90,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   render() {
     return (
-      <article className="post">
+      <article className="post" ref={this.scrollRef}>
         <div dangerouslySetInnerHTML={ { __html: this.props.fullText } } />
       </article>
     );
