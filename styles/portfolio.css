@@ -3,14 +3,6 @@
   width: 100%;
 }
 
-.heading__image {
-  border-radius: 50%;
-  float: right;
-  margin: 1em;
-  width: 15vw;
-  max-width: 90px;
-}
-
 .sorter {
   /* Container for technology selector */
 }

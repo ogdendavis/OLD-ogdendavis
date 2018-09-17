@@ -234,7 +234,7 @@ class Portfolio extends React.Component {
   render() {
     return (
       <div className="portfolio__container">
-        <img className="heading__image" src="images/lucas-on-trike-small.jpg" alt="Lucas on a small tricycle" />
+        <img className="heading__image" src="images/lucas-pistol-in-peru-small.jpg" alt="Lucas on a small tricycle" />
         <h1 className="heading">My Portfolio</h1>
         {this.drawSorter(this.state.sorterVisible)}
         {this.drawProjects()}

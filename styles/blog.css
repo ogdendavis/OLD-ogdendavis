@@ -2,26 +2,59 @@
   /* Class applied to "main" for blog.html */
 }
 
-.blog__header {
+.heading {
   /* Title and overall info for blog */
 }
 
-.blog__thumbnail {
-  border: 1px solid black;
+.thumbnail {
   border-radius: var(--rounded);
   box-sizing: border-box;
   display: inline-block;
-  height: 300px;
-  overflow: hidden;
-  margin: 1em 1%;
-  padding: 0.5em;
-  width: 30%;
+  height: 5em;
+  margin: 0.25em 0;
+  padding: 0 1em;
+  position: relative;
+  transition: var(--transition-time);
+  -moz-transition: var(--transition-time);
+  -ms-transition: var(--transition-time);
+  -o-transition: var(--transition-time);
+  -webkit-transition: var(--transition-time);
+  width: 100%;
 }
 
-.blog__thumbnail:hover {
+.thumbnail:hover {
   cursor: pointer;
 }
 
-.blog__post {
+.thumbnail__title {
+
+}
+
+.thumbnail__date {
+  bottom: 0;
+  display: block;
+  font-size: 0.75em;
+  position: absolute;
+  right: 1em;
+  text-align: right;
+}
+
+.thumbnail__snippet {
+  font-style: italic;
+  margin-top: 0.5em;
+}
+
+.post {
   /* <article> for active blog post */
+  margin: auto;
+  width: 96%
+}
+
+.post p {
+  text-align: justify;
+  text-indent: 1em;
+}
+
+.post p:first-of-type {
+  margin-top: 0;
 }

@@ -1,22 +1,25 @@
 {
   "0": {
     "title": "A Fake Blog Post",
+    "date": "September 12, 2018",
     "image": "images/blog/Firefox-styleEditor.png",
     "imageOrientation": "landscape",
     "imageAlt": "A Firefox window with the Style Editor opened",
-    "snippet": "This is the first in a series of fake blog posts that I'm going to write so I have something to mess with when formatting the blog.",
+    "snippet": "This is the first in a series of fake blog posts.",
     "fullText": "<p>At the beginning of 2013, I put some goals for the gym on the blog. I figure now is an appropriate time to check in on those goals, and to set some goals for 2014:</p><p><strong>Goals from 2013:</strong></p><p>– All current members doing unassisted pullups in WODs<br><em>We did pretty well on this one. Many of our members from January 2013 have at least a few unassisted pull-ups, and those who don’t have progressed mightily in terms of the scalings they use.</em></p><p>– Members placing in top 10 of local/regional competitions (because we know we’re badass enough to do it)<br><em>Failsauce. This one was my fault — we had a number of members who did a few competitions and performed well, but never got organized as a gym around any one event.</em></p><p>– More team WODs (because they’re the most ridiculously fun way to kick your own butt)<br><em>Great success! We do team WODs on most weekends, and it makes our Saturday classes some of the most fun I’ve ever had in the realm of exercise!</em></p><p>– Attendance/membership increased enough to merit/necessitate adding more classes<br><em>This happened. We’ve added a 5 a.m., 9 a.m., 12:15 p.m., and 7:30 p.m. class this year. Sadly, we lost our 7 a.m. class, but we still added 3 new class times while also increasing the average number of attendees per class.</em></p><p>– World domination<br><em>Getting close…</em></p><p><strong>And now, some goals for 2014:</strong></p><p>– Have at least half of all Manatees complete the <a href='http://games.crossfit.com/about-the-games' target='_blank'>CrossFit Open<br></a></p><p>– Be more involved in local events (5k’s, CrossFit competitions, etc.)</p><p>– Improve our offerings outside of classes (more on this next week)</p><p>– Get our average Fran time under 8 minutes</p><p>– World domination! (again)</p>"
   },
   "1": {
     "title": "A Newbie's CSS Workflow Trick",
+    "date": "September 12, 2018",
     "image": "images/blog/Firefox-styleEditor.png",
     "imageOrientation": "landscape",
     "imageAlt": "A Firefox window with the Style Editor opened",
-    "snippet": "A simple discovery in Firefox's Style Editor -- which I probably should’ve found long ago -- helped me significantly speed up my CSS writing and debugging process.",
+    "snippet": "A simple discovery in Firefox's Style Editor helped me significantly speed up my CSS process.",
     "fullText": "<p>When I’m working on a front-end project, I’m almost always working with files stored locally, doing everything from project setup to final debugging on my trusty little laptop. I don’t have a fancy dual-screen workstation, so I’m constantly switching between windows -- from my terminal to my text editor to my browser, back to my text editor, etc, etc.</p><p>One of the most annoying pieces of front-end development in this workflow, which I think is a typical pattern for many beginning front-end developers or professionals working remotely, is writing and debugging my CSS. Or rather, this was annoying until I found out that Firefox’s Style Editor can almost completely eliminate this pain point for me.</p><p>Here’s what I used to do when writing my CSS: First, I’d apply styling classes to my HTML or JSX and link a fresh stylesheet. Then. I’d open up the new CSS file in my text editor and apply the rules that I thought would style my content how I wanted it. I’d save my work, open up the project in a browser, and see how it looked. I’d either experiment with changes in the inspector or just eyeball the adjustments I needed to make, and then I’d then go back to the text editor and make the edits. I’d repeat ad nauseum until the styling was correct, clicking back and forth between my text editor and my browser over and over again… It was a frustratingly slow and clumsy process.</p><p>But then I discovered something that most experienced developers probably take for granted: If you’re modifying a locally-saved stylesheet in Firefox’s Style Editor, you can save your changes to that stylesheet directly from Firefox. It’s not even hard -- all you have to do is hit ctrl-s or cmd-s while you have the stylesheet selected, or just click the handy-dandy “Save” link that pops up next to the filename in the Style Editor window. That’s it. It’s so simple, and so powerful, and it saves me so much time when I’m debugging some weird CSS issue.</p><p>However, with great power comes great responsibility. If you’re in the habit of hitting save frequently as you work, editing your CSS from the Style Editor can be risky. It’s hard to backtrack changes that you’ve made from the Style Editor -- you can’t just hit “undo” like you can in your text editor. And if, like me, you’re used to experimenting in your browser’s Dev Tools, knowing that you can just reload the page if you screw things up too badly, you could accidentally end up saving a CSS file that has all sorts of exotic rules written in, and that you can’t easily revert back to the previous version.</p><p>Despite the dangers, if you’re a front-end developer who does your coding locally on a single-monitor machine, writing and saving your CSS from within the Firefox Style Editor can really speed up the styling process, saving you a huge amount of time and frustration. So give it a shot!</p>"
   },
   "2": {
     "title": "Fake Blog Posts Are the Best!",
+    "date": "September 12, 2018",
     "image": "images/blog/Firefox-styleEditor.png",
     "imageOrientation": "landscape",
     "imageAlt": "A Firefox window with the Style Editor opened",
@@ -25,6 +28,7 @@
   },
   "3": {
     "title": "This Is Definitely a Real Blog Post",
+    "date": "September 12, 2018",
     "image": "images/blog/Firefox-styleEditor.png",
     "imageOrientation": "landscape",
     "imageAlt": "A Firefox window with the Style Editor opened",

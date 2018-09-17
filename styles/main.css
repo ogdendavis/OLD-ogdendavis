@@ -6,7 +6,7 @@ body {
   --bg-color-very-dark: #005E51;
   --bg-color-transparent: radial-gradient(rgba(74,189,172,1),rgba(74,189,172,0.8));
   --bg-color-dark-to-very-dark: radial-gradient(var(--bg-color-dark),var(--bg-color-very-dark));
-  --bg-orange-transparent: linear-gradient(rgba(255,239,208,0.3), rgba(255,214,131,0.4));
+  --bg-orange-transparent: linear-gradient(rgba(255,239,208,0.5), rgba(255,214,131,0.7));
   --emphasis-color: #FC4A1A;
   --link-color: #FFD683;
   --rounded: 0.2em;
@@ -83,6 +83,19 @@ h2 {
   margin: 0.5em auto;
 }
 
+.heading__image {
+  border-radius: 50%;
+  float: right;
+  margin: 1em;
+  width: 15vw;
+  max-width: 90px;
+}
+
+.subtitle {
+  font-style: italic;
+  margin-top: 0;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -121,7 +134,7 @@ h2 {
 .nav__list__item:hover .nav__button {
   background: linear-gradient(var(--visited-color), #DBAE53);
   box-shadow: 0 0 1.5em var(--text-color);
-  color: black;
+  color: #222;
   cursor: pointer;
 }
 
@@ -140,11 +153,11 @@ h2 {
   .heading--homepage {
     margin-top: 0.75em;
   }
-  
+
   .nav {
     top: 13em;
   }
-  
+
   .nav__list__item {
     display: inline-block;
     margin: 0 1em;
@@ -260,7 +273,7 @@ h2 {
 .nav__list--collapse .nav__list__item:hover .nav__button {
   background: none;
   box-shadow: none;
-  color: black;
+  color: #222;
   text-shadow: 0 0 1em white;
 }
 
