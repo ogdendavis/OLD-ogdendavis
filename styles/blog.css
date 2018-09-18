@@ -46,8 +46,12 @@
 
 .post {
   /* <article> for active blog post */
-  margin: auto;
-  width: 96%
+  background: linear-gradient(rgba(20,20,20,0.5), rgba(20,20,20,0.5));
+  border-radius: var(--rounded);
+  box-sizing: border-box;
+  line-height: 1.35em;
+  padding: 0.25em 0.5em;
+  width: 100%
 }
 
 .post p {
@@ -59,6 +63,35 @@
   margin-top: 0;
 }
 
+.post ol, .post ul {
+  list-style: none;
+  counter-reset: item;
+}
+
+.post ol li, .post ul li {
+  position: relative;
+  text-indent: 1em;
+}
+
+.post ol li::before {
+  content: counter(item);
+  counter-increment: item;
+  font-size: 1.5em;
+  font-weight: 700;
+  position: absolute;
+  left: -1em;
+  text-shadow: 1px 1px 2px rgba(2,2,2,0.5);
+}
+
+.post li {
+  margin-bottom: 1.25em;
+}
+
+.post__footnote {
+  font-size: 0.75em;
+  font-style: italic;
+}
+
 @media only screen and (min-width: 640px) {
-  
+
 }

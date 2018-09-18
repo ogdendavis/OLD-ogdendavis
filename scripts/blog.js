@@ -114,7 +114,6 @@ class FullPost extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.scrollRef.current);
     window.scrollTo({
       top: this.scrollRef.current.offsetTop-90,
       left: 0,
