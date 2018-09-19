@@ -35,36 +35,39 @@ function loadBlog(blog) {
   ReactDOM.render(<Blog posts={blog} />, document.querySelector('.main'));
 }
 
+// find width to use in all components!
+function findWidth() {
+  return Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+}
+
+// now for React components
+
 class ThumbPost extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hover: false
+      hover: false,
+      active: false
     }
-    this.styleThumb = this.styleThumb.bind(this);
+    this.styleThumbBackground = this.styleThumbBackground.bind(this);
     this.detailOnHover = this.detailOnHover.bind(this);
     this.noDetail = this.noDetail.bind(this);
     this.titleOrSnippet = this.titleOrSnippet.bind(this);
   }
 
-  styleThumb() {
-    const backgroundStyles = {
+  componentDidUpdate() {
+    if (this.props.active !== this.state.active) {
+      this.setState( { active: this.props.active } );
+    }
+  }
+
+  styleThumbBackground() {
+    return {
       background: `linear-gradient(rgba(20,20,20,0.7), rgba(20,20,20,0.9)), url(${this.props.image})`,
       backgroundPosition: '50% 50%',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover'
     };
-    const hoverStyles = {
-      boxShadow: '0 0 1.5em var(--text-color)',
-    };
-    if (this.state.hover === true) {
-      return {
-        ...backgroundStyles,
-        ...hoverStyles
-      };
-    } else {
-      return backgroundStyles;
-    }
   }
 
   detailOnHover() {
@@ -91,9 +94,29 @@ class ThumbPost extends React.Component {
   }
 
   render() {
+    if (this.props.first === true) { //case for first thumb on desktop
+      return(
+        <div className='thumbnail'
+          style={this.styleThumbBackground()}
+          onClick={this.props.clickHandler}
+          onMouseEnter={this.detailOnHover}
+          onMouseLeave={this.noDetail}
+          onTouchStart={this.detailOnHover}
+          onTouchEnd={() => {window.setTimeout(this.noDetail, 3000)}}
+          data-post={this.props.clickId}
+        >
+        <div>
+          <h2 className="thumbnail__title" data-post={this.props.clickId}>{this.props.title}</h2>
+          <p className="thumbnail__snippet" data-post={this.props.clickId}>{this.props.snippet}</p>
+          <p className="thumbnail__date">{this.props.date}</p>
+        </div>
+        </div>
+      );
+    }
+    //default for all others
     return(
-      <div className="thumbnail"
-        style={this.styleThumb()}
+      <div className='thumbnail'
+        style={this.styleThumbBackground()}
         onClick={this.props.clickHandler}
         onMouseEnter={this.detailOnHover}
         onMouseLeave={this.noDetail}
@@ -102,6 +125,7 @@ class ThumbPost extends React.Component {
         data-post={this.props.clickId}
       >
         {this.titleOrSnippet()}
+        {findWidth() < 640 ? null : <p className="thumbnail__date">{this.props.date}</p>}
       </div>
     );
   }
@@ -114,8 +138,11 @@ class FullPost extends React.Component {
   }
 
   componentDidMount() {
+    const scrollTop = findWidth() < 640 ?
+      this.scrollRef.current.offsetTop-90 :
+      this.scrollRef.current.offsetTop-170;
     window.scrollTo({
-      top: this.scrollRef.current.offsetTop-90,
+      top: scrollTop,
       left: 0,
       behavior: 'smooth'
     });
@@ -137,6 +164,7 @@ class Blog extends React.Component {
       activePost: false // The number of the post being fully displayed will go here!
     }
     this.drawBlog = this.drawBlog.bind(this);
+    this.reorderKeys = this.reorderKeys.bind(this);
     this.drawThumb = this.drawThumb.bind(this);
     this.drawActive = this.drawActive.bind(this);
     this.setActivePost = this.setActivePost.bind(this);
@@ -144,23 +172,54 @@ class Blog extends React.Component {
 
   drawBlog() {
     const posts = this.props.posts;
-    const keys = Object.keys(posts);
+    let keys = Object.keys(posts);
     const drawnPosts = [];
+
+    // On desktop, move active post to the front of the line! (?)
+    if (findWidth() >= 640 && this.state.activePost !== false) {
+      keys = this.reorderKeys(keys);
+    }
+
     for (let i=keys.length-1; i>=0; i--) {
-      const thisKey = keys[i];
+      const thisKey = Number(keys[i]);
       const thisPost = posts[thisKey];
-      if (this.state.activePost === i) { // case for the selected post
-        drawnPosts.push(this.drawThumb(thisPost, thisKey, i), this.drawActive(thisPost, thisKey));
+      if (findWidth() >= 640 && i === keys.length-1) { // case for first post in desktop
+        drawnPosts.push(this.drawThumb(thisPost, thisKey, true, true));
+        if (this.state.activePost === thisKey) {
+          drawnPosts.push(this.drawActive(thisPost, thisKey));
+        }
+      }
+      else if (this.state.activePost === thisKey) { // case for the selected post
+        drawnPosts.push(this.drawThumb(thisPost, thisKey, true, false), this.drawActive(thisPost, thisKey));
       }
       else { // case for inactive posts - thumb only
-        drawnPosts.push(this.drawThumb(thisPost, thisKey, i));
+        drawnPosts.push(this.drawThumb(thisPost, thisKey, false));
       }
     }
+    /*
+
+    Now that it's set so that the keys are reordered and the active post always
+    goes to the top, I can insert rows into the list of thumbnails by inserting
+    opening and closing div tags at the appropriate points in the drawnPosts
+    array. At least, I think/hope I can...
+
+    */
+
     return drawnPosts;
   }
 
-  drawThumb(post, key, index) {
-    return (<ThumbPost key={`thumb${key}`} title={post.title} date={post.date} image={post.image} snippet={post.snippet} clickHandler={this.setActivePost} clickId={index} />
+  reorderKeys(keys) {
+    const activeKey = keys[this.state.activePost];
+    if (activeKey && activeKey != keys.length-1) {
+      const activePostFirst = keys.slice(0, Number(activeKey)).concat(keys.slice(Number(activeKey)+1, keys.length));
+      activePostFirst.push(activeKey);
+      return activePostFirst;
+    }
+    return keys;
+  }
+
+  drawThumb(post, key, isActive, isFirst) {
+    return (<ThumbPost key={`thumb${key}`} title={post.title} date={post.date} image={post.image} snippet={post.snippet} clickHandler={this.setActivePost} clickId={Number(key)} active={isActive} first={isFirst} />
     );
   }
 

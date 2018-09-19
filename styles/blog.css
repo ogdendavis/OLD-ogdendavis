@@ -14,6 +14,7 @@
   margin: 0.25em 0;
   padding: 0 1em;
   position: relative;
+  text-align: left;
   transition: var(--transition-time);
   -moz-transition: var(--transition-time);
   -ms-transition: var(--transition-time);
@@ -24,6 +25,8 @@
 
 .thumbnail:hover {
   cursor: pointer;
+  box-shadow: 0 0 1.5em var(--text-color);
+  text-align: justify;
 }
 
 .thumbnail__title {
@@ -32,11 +35,9 @@
 
 .thumbnail__date {
   bottom: 0;
-  display: block;
   font-size: 0.75em;
   position: absolute;
-  right: 1em;
-  text-align: right;
+  right: 1.5em;
 }
 
 .thumbnail__snippet {
@@ -93,5 +94,34 @@
 }
 
 @media only screen and (min-width: 640px) {
+  .thumbnail {
+    /* .main is 640px wide with 1em (16px) padding on sides, so 608px usable*/
+    display: inline-block;
+    margin: 1em;
+    width: 15em;
+    height: 10em;
+  }
 
+  .thumbnail:first-of-type {
+    /* styling here because on first load, first won't necessarily be active,
+    and upon click, active will always be first */
+    height: 8em;
+    margin: 0.25em 0;
+    width: 100%;
+  }
+
+  .thumbnail--active .thumbnail__date {
+    font-size: 0.75em;
+    float:right;
+    margin-top: 0;
+    position: relative;
+  }
+
+  .thumbnail__snippet {
+    margin: 1em 0;
+  }
+
+  .post {
+    padding: 1em;
+  }
 }

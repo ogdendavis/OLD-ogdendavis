@@ -20,7 +20,7 @@
   "2": {
     "title": "A Newbie's CSS Workflow Trick",
     "date": "September 12, 2018",
-    "image": "images/blog/Firefox-styleEditor.png",
+    "image": "images/blog/firefox-styleeditor.png",
     "imageOrientation": "landscape",
     "imageAlt": "A Firefox window with the Style Editor opened",
     "snippet": "A discovery in Firefox's Style Editor helped me speed up my CSS process",
@@ -28,38 +28,11 @@
   },
   "3": {
     "title": "Writing and Coding",
-    "date": "September 17, 2018",
+    "date": "September 18, 2018",
     "image": "images/blog/books.jpg",
     "imageOrientation": "landscape",
     "imageAlt": "A stack of books with reading glasses on top",
     "snippet": "On using words to put ideas out into the world",
     "fullText": "<p>Ever since I was a kid, I’ve loved books. My mom played a big part in this; she read to me when I was really little, and always encouraged me to read. She told me when I was young that whenever I wanted a book, she would buy it for me -- and she stuck to that promise throughout my youth. (Thanks, mom!)</p><p>So I grew up reading, and loved immersing myself in the imaginary worlds of books. Over time, my love of books also developed into a love of writing. Just as I enjoyed immersing myself in the world of a good book, I enjoyed creating my own little worlds out of nothing but words on paper. I loved, and still love, the feeling of putting ideas down on paper (or, more commonly, a screen) so that other people could pick them up later, examine them, and use them however they saw fit.</p><p>I still love reading and writing, and I think that reading good books and writing about what you read are great ways to learn about yourself and the world around you. But when I was in high school and college, I clung so strongly to being a “humanities guy” that I didn’t really push myself to fully explore other areas. I took math and science courses as part of my undergraduate and graduate degrees, but I didn’t dive into those courses wholeheartedly; I did what I had to do to get decent grades, and didn’t go beyond that.</p><p>I regret that narrow-mindedness now, because I’ve found that I really, really love coding. If writing is putting ideas on to paper so that other people can pick them up and use them in their own lives, then coding is taking those ideas and making them into little idea-robots that can run around and do things on their own.</p><p>The processes of writing essays and writing code are similar: In both, you go through the stages of ideation, drafting, revision, and publication. In both, you can spend long hours agonizing over details and finding just the right tweak to make everything fall together perfectly. The syntax is different, and the processes (and the people who do them) are often perceived differently, but the two things are fundamentally the same: You take an idea, and you use words to put that idea out into the world.</p><p>I wish that I’d found this bridge between literature and computer science earlier in life. Being a mid-30’s career-changer is tough. I’m in this weird in-between position where many hiring managers think I’m too experienced for an internship (But I’m not! I’d love to be an intern!), but not yet experienced enough for a junior developer job.</p><p>I know I’ll find a way through. I’ll keep learning, and I’ll keep working, and I’ll keep networking, and I’ll keep plugging along until I can finally, officially, call myself a web developer. I’ll code every day because I love the process, and I’ll keep trying to find ways to put myself out there and get more experience.</p><p>And in the evenings, when my wife and I are relaxing on the couch, I’ll pour myself a glass of wine, call the dog up onto my lap, and bury my nose in a good book.</p>"
-  },
-  "4": {
-    "title": "This Is Definitely a Real Blog Post",
-    "date": "September 12, 2018",
-    "image": "images/blog/Firefox-styleEditor.png",
-    "imageOrientation": "landscape",
-    "imageAlt": "A Firefox window with the Style Editor opened",
-    "snippet": "In the history of blog posts, there has never been a blog post that has been more real than this one.",
-    "fullText": "<p>The single biggest element in your success in CrossFit, or in anything, is simply <a href='http://crossfitmanatee.com/2013/02/14/02-15-13-friday-showing-up/'' target='_blank' rel='noopener'>showing up every day</a> and putting in the work. If your only strategy to improve your health and fitness is to get to the gym every single day and do what your coaches tell you to do, then you’ll do just fine. Heck, you’ll do better than fine — you’ll get into the best shape of your life.</p><p>But there are other things you can do in or around that hour of time you’ve dedicated to the gym to get even more out of your CrossFit experience. Here are three simple ways to super-charge your gym experience:</p><h3>Show up 5 minutes early</h3><p>Dedicate those five minutes before class working on something that you really, really suck at. Spend the time in a stretch that is particularly challenging for you, or working on a skill that you can’t quite grasp. Getting to the gym five minutes early isn’t that hard, and those little increments of time spent working on your weaknesses will add up quickly.</p><h3>Focus on the task at hand</h3><p>When you’re doing your Foundation work, don’t think ahead to the WOD. When you’re doing the WOD, don’t worry about how you did in the Foundation, or what’s coming up tomorrow. Simply focus on giving every ounce of effort that you possibly can to completing the task in front of you at this moment. You’ll be surprised at how tuning the rest of the world out and giving your complete attention to your current task will make your workouts more rewarding, and will help your results improve more quickly.</p><h3>Re-fuel</h3><p>When you exercise, you make your body weaker, slower, and less fit. It’s what your body does to <a href='http://crossfitmanatee.com/2013/11/10/11-11-13-monday-what-is-recovery/' target='_blank' rel='noopener'>recover from exercise</a> that makes you stronger, faster, and more fit. The best way to jump-start that recovery process and get the most out of the rebuilding time between the workout you just finished and tomorrow’s WOD is to give your body some good fuel immediately after working out. This can come in the form of a protein shake, a bar, or a small meal. Giving your body the tools to recover from the workout within half an hour of exercising will really improve your recovery and help you see results more quickly.</p><p>You’ve already made the big commitment of spending an hour each day working on your own health and fitness. These three simple steps don’t require much time or energy, and they’ll help you make the most out of your time in the gym.</p>"
-  },
-  "5": {
-    "title": "And Another",
-    "date": "September 12, 2018",
-    "image": "images/blog/Firefox-styleEditor.png",
-    "imageOrientation": "landscape",
-    "imageAlt": "A Firefox window with the Style Editor opened",
-    "snippet": "In the history of blog posts, there has never been a blog post that has been more real than this one.",
-    "fullText": "<p>The singing is nice</p>"
-  },
-  "6": {
-    "title": "And Another",
-    "date": "September 12, 2018",
-    "image": "images/blog/Firefox-styleEditor.png",
-    "imageOrientation": "landscape",
-    "imageAlt": "A Firefox window with the Style Editor opened",
-    "snippet": "In the history of blog posts, there has never been a blog post that has been more real than this one.",
-    "fullText": "<p>The singing is nice</p>"
   }
 }
