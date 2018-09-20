@@ -135,7 +135,7 @@ class FullPost extends React.Component {
   componentDidMount() {
     const scrollTop = findWidth() < 640 ?
       this.scrollRef.current.offsetTop-90 :
-      this.scrollRef.current.offsetTop-170;
+      this.scrollRef.current.offsetTop-140;
     window.scrollTo({
       top: scrollTop,
       left: 0,
