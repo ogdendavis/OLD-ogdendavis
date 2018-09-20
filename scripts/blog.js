@@ -63,7 +63,7 @@ class ThumbPost extends React.Component {
 
   styleThumbBackground() {
     return {
-      background: `linear-gradient(rgba(20,20,20,0.7), rgba(20,20,20,0.9)), url(${this.props.image})`,
+      background: `linear-gradient(rgba(20,20,20,0.6), rgba(20,20,20,0.8)), url(${this.props.image})`,
       backgroundPosition: '50% 50%',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover'

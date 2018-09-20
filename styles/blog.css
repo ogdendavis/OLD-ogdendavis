@@ -47,7 +47,7 @@
 
 .post {
   /* <article> for active blog post */
-  background: linear-gradient(rgba(20,20,20,0.5), rgba(20,20,20,0.5));
+  background: linear-gradient(rgba(20,20,20,0.3), rgba(20,20,20,0.3));
   border-radius: var(--rounded);
   box-sizing: border-box;
   line-height: 1.35em;
@@ -98,6 +98,7 @@
     /* .main is 640px wide with 1em (16px) padding on sides, so 608px usable*/
     width: 13em;
     height: 10em;
+    margin: 0.15em;
   }
 
   .blog__container > .thumbnail:first-of-type {
@@ -121,10 +122,9 @@
     flex-flow: row wrap;
     justify-content: space-around;
   }
-  
+
   .blog__thumbContainer:after {
-    content: "...that's all, folks!";
-    font-size: 0.2em;
+    content: "";
     flex: auto;
     text-align: right;
   }
