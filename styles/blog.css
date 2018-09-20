@@ -96,25 +96,16 @@
 @media only screen and (min-width: 640px) {
   .thumbnail {
     /* .main is 640px wide with 1em (16px) padding on sides, so 608px usable*/
-    display: inline-block;
-    margin: 1em;
-    width: 15em;
+    width: 13em;
     height: 10em;
   }
 
-  .thumbnail:first-of-type {
+  .blog__container > .thumbnail:first-of-type {
     /* styling here because on first load, first won't necessarily be active,
     and upon click, active will always be first */
     height: 8em;
     margin: 0.25em 0;
     width: 100%;
-  }
-
-  .thumbnail--active .thumbnail__date {
-    font-size: 0.75em;
-    float:right;
-    margin-top: 0;
-    position: relative;
   }
 
   .thumbnail__snippet {
@@ -123,5 +114,18 @@
 
   .post {
     padding: 1em;
+  }
+
+  .blog__thumbContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  
+  .blog__thumbContainer:after {
+    content: "...that's all, folks!";
+    font-size: 0.2em;
+    flex: auto;
+    text-align: right;
   }
 }

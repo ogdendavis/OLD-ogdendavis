@@ -160,6 +160,7 @@ class Blog extends React.Component {
     }
     this.drawBlog = this.drawBlog.bind(this);
     this.reorderKeys = this.reorderKeys.bind(this);
+    this.containInactiveThumbs = this.containInactiveThumbs.bind(this);
     this.drawThumb = this.drawThumb.bind(this);
     this.drawActive = this.drawActive.bind(this);
     this.setActivePost = this.setActivePost.bind(this);
@@ -191,16 +192,11 @@ class Blog extends React.Component {
         drawnPosts.push(this.drawThumb(thisPost, thisKey, false));
       }
     }
-    /*
 
-    Now that it's set so that the keys are reordered and the active post always
-    goes to the top, I can insert rows into the list of thumbnails by inserting
-    opening and closing div tags at the appropriate points in the drawnPosts
-    array. At least, I think/hope I can...
-
-    */
-
-    return drawnPosts;
+    return findWidth() < 640 ? drawnPosts :
+      this.state.activePost !== false ?
+      [drawnPosts[0], drawnPosts[1], this.containInactiveThumbs(drawnPosts, true)] :
+      [drawnPosts[0], this.containInactiveThumbs(drawnPosts, false)];
   }
 
   reorderKeys(keys) {
@@ -211,6 +207,20 @@ class Blog extends React.Component {
       return activePostFirst;
     }
     return keys;
+  }
+
+  containInactiveThumbs(allPosts, isAnyActive) {
+    const inactiveThumbs = isAnyActive === true ? allPosts.slice(2) : allPosts.slice(1);
+    const morePosts = isAnyActive === true ?
+      <div className='thumbnail' style={{background: 'var(--bg-orange-transparent), url(images/lucas-on-trike.jpg)', backgroundPosition: '50% 50%', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', cursor: 'default', color: '#222'}}>
+        <h2 className="thumbnail__title" style={{position: 'absolute', top: '-0.5em', right: '0.5em'}}>More Posts…</h2>
+      </div> : null;
+    return (
+      <div className="blog__thumbContainer" key="inactiveThumbs">
+        {morePosts}
+        {inactiveThumbs}
+      </div>
+    );
   }
 
   drawThumb(post, key, isActive, isFirst) {
