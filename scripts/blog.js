@@ -81,10 +81,7 @@ class ThumbPost extends React.Component {
   titleOrSnippet() {
     if (this.state.hover === false) {
       return (
-        <div>
-          <h2 className="thumbnail__title" data-post={this.props.clickId}>{this.props.title}</h2>
-          <p className="thumbnail__date">{this.props.date}</p>
-        </div>
+        <h2 className="thumbnail__title" data-post={this.props.clickId}>{this.props.title}</h2>
       );
     } else if (this.state.hover === true) {
       return (
@@ -105,11 +102,9 @@ class ThumbPost extends React.Component {
           onTouchEnd={() => {window.setTimeout(this.noDetail, 3000)}}
           data-post={this.props.clickId}
         >
-        <div>
           <h2 className="thumbnail__title" data-post={this.props.clickId}>{this.props.title}</h2>
           <p className="thumbnail__snippet" data-post={this.props.clickId}>{this.props.snippet}</p>
           <p className="thumbnail__date">{this.props.date}</p>
-        </div>
         </div>
       );
     }
@@ -240,7 +235,7 @@ class Blog extends React.Component {
   render() {
     return (
       <div className="blog__container">
-        <img className="heading__image" src="images/lucas-in-antwerp-small.jpg" alt="Lucas on a small tricycle" />
+        <img className="heading__image" src="images/lucas-in-antwerp-small.jpg" alt="Lucas drinks a beer in Belgium" />
         <h1 className="heading">My Blog</h1>
         <p className="subtitle">Thoughts on web development, technology, and life in general</p>
         {this.drawBlog()}
