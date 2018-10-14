@@ -7,6 +7,7 @@ body {
   --bg-color-transparent: radial-gradient(rgba(74,189,172,1),rgba(74,189,172,0.8));
   --bg-color-dark-to-very-dark: radial-gradient(var(--bg-color-dark),var(--bg-color-very-dark));
   --bg-orange-transparent: linear-gradient(rgba(255,239,208,0.5), rgba(255,214,131,0.7));
+  --bg-gray-transparent: linear-gradient(rgba(32,32,32,0.9),rgba(32,32,32,0.9));
   --emphasis-color: #FC4A1A;
   --link-color: #FFD683;
   --rounded: 0.2em;
@@ -28,7 +29,7 @@ body:after {
 	bottom: 0;
 	z-index: -1;
 	display: block;
-	background: var(--bg-color-transparent), url('../images/lucas-on-trike.jpg');
+	background: var(--bg-gray-transparent), url('../images/lucas-on-trike.jpg');
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
