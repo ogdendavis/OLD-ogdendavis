@@ -1,13 +1,13 @@
 /* Globals */
 
 body {
-  --bg-color: #4ABDAC;
-  --bg-color-dark: #0E9683;
-  --bg-color-very-dark: #005E51;
-  --bg-color-transparent: radial-gradient(rgba(74,189,172,1),rgba(74,189,172,0.8));
-  --bg-color-dark-to-very-dark: radial-gradient(var(--bg-color-dark),var(--bg-color-very-dark));
+  --bg-teal: #4ABDAC;
+  --bg-teal-dark: #0E9683;
+  --bg-teal-very-dark: #005E51;
+  --bg-teal-transparent: radial-gradient(rgba(74,189,172,1),rgba(74,189,172,0.8));
+  --bg-teal-dark-to-very-dark: radial-gradient(var(--bg-teal-dark),var(--bg-teal-very-dark));
   --bg-orange-transparent: linear-gradient(rgba(255,239,208,0.5), rgba(255,214,131,0.7));
-  --bg-gray-transparent: linear-gradient(rgba(32,32,32,0.9),rgba(32,32,32,0.9));
+  --bg-gray-transparent: linear-gradient(rgba(32,48,48,0.9),rgba(32,48,48,0.9));
   --emphasis-color: #FC4A1A;
   --link-color: #FFD683;
   --rounded: 0.2em;

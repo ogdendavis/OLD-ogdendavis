@@ -25,7 +25,7 @@
 
 .sorter__list {
   /* ul of technologies */
-  background: var(--bg-color-dark-to-very-dark);
+  background: var(--bg-teal-dark-to-very-dark);
   border-radius: var(--rounded);
   color: var(--text-color);
   display: block;
@@ -46,7 +46,7 @@
 
 .portfolio {
   /* The part that houses the actual projects! */
-  color: var(--bg-color-very-dark);
+  color: var(--bg-teal-very-dark);
   margin-top: 1em;
   text-align: justify;
 }
@@ -102,7 +102,7 @@
 
 .portfolio__details {
   /* Container for tech list and links, which will be hidden until user mouses over */
-  background: var(--bg-color-dark-to-very-dark);
+  background: var(--bg-teal-dark-to-very-dark);
   border-radius: var(--rounded);
   box-shadow: inset 0 0 10px #000000;
   box-sizing: border-box;
