@@ -1,15 +1,37 @@
 {
   "roguelike": {
     "name": "Roguelike Game",
-    "description": "An in-browser game in which players explore the “hospital,” clean messes, and defeat the boss! Built in React, using Redux to manage random map generation and game logic. SCSS variables and nesting are used to keep styles easily readable, and a simple media query makes the game usable on mobile devices, as well.",
+    "category": "problem-solving",
+    "description": "A hypothetical television property wants to expand its audience, specifically targeting younger consumers who may have only experienced the show as reruns. To connect with these potential customers online, the show develops a browser-based and mobile-friendly game featuring characters from the show. This game is built in React, using Redux to manage random map generation and game logic. SCSS variables and nesting are used to keep styles easily readable, and a simple media query makes the game usable on mobile devices.",
     "technologies": ["HTML", "SCSS", "JavaScript", "React", "Redux"],
     "liveUrl": "https://ogdendavis.github.io/roguelike/",
     "repoUrl": "https://github.com/ogdendavis/roguelike",
     "imageMonitor": "images/portfolio/roguelike-monitor.png",
     "imagePhone": "images/portfolio/roguelike-phone.png"
   },
+  "heatMap": {
+    "name": "Literal Heat Map",
+    "category": "problem-solving",
+    "description": "A hypothetical environmental organization wants to persuade skeptics that global warming is a real issue. Since effective persuasion is emotional as opposed to purely factual, data visualization is used to show increasing average temperatures as a sea of color that becomes more and more alarmingly red. An asynchronous AJAX request is sent after the page loads to get temperature data from a third party in the form of a JSON object. D3 is used to handle the translation of that data into visual representation, and the page is redrawn whenever the window is resized, so that all data fits on the screen at all times.",
+    "technologies": ["HTML", "CSS", "JavaScript", "D3", "JSON", "AJAX"],
+    "liveUrl": "https://codepen.io/ogdendavis/full/yjJNGw/",
+    "repoUrl": "https://codepen.io/ogdendavis/pen/yjJNGw",
+    "imageMonitor": "images/portfolio/heatMap-monitor.png",
+    "imagePhone": "images/portfolio/heatMap-phone.png"
+  },
+  "androidLogo": {
+    "name": "Logo Animations",
+    "category": "problem-solving",
+    "description": "A hypothetical business has identified poor customer retention as a primary cause for declining margins. As part of an effort to improve retention, the organization launches a marketing campaign to improve customer perception of the brand. This “Easter Egg” logo is placed on the website to inspire joy, surprise, and positive emotional connection to the brand. The animations are created entirely with CSS -- no JavaScript was used for this project.",
+    "technologies": ["HTML", "CSS"],
+    "liveUrl": "https://ogdendavis.github.io/android-logo/",
+    "repoUrl": "https://github.com/ogdendavis/android-logo",
+    "imageMonitor": "images/portfolio/android-monitor.png",
+    "imagePhone": "images/portfolio/android-phone.png"
+  },
   "weather": {
     "name": "Happy Weather",
+    "category": "technical",
     "description": "A weather app that loads current weather and imagery based on the user's location and time of day. The weather is loaded from a third-party API using jQuery's $get and $(document).ready to retrieve the JSON object. The Google Maps API is used to allow users to view weather at a different location, and for users whose browsers do not support location detection.",
     "technologies": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "AJAX", "Google Maps API"],
     "liveUrl": "https://codepen.io/ogdendavis/full/mpOgVB/",
@@ -19,48 +41,13 @@
   },
   "calculator": {
     "name": "Simple Calculator",
+    "category": "technical",
     "description": "A simple-but-awesome JavaScript calculator that works just like the one sitting in your desk drawer. The calculator functionality and time-of-day background change are written in vanilla JavaScript. Bootstrap's grid system is used for the calculator display, and a simple media query modifies the calculator's position and size to make it usable on mobile devices.",
     "technologies": ["HTML", "CSS", "Bootstrap", "JavaScript"],
     "liveUrl": "https://ogdendavis.github.io/calculator/",
     "repoUrl": "https://github.com/ogdendavis/calculator",
     "imageMonitor": "images/portfolio/calculator-monitor.png",
     "imagePhone": "images/portfolio/calculator-phone.png"
-  },
-  "gameOfLife": {
-    "name": "Game of Life",
-    "description": "A React implementation of Conway's Game of Life. A combination of Class Components and Stateless Functional Components are used to render the game and generate the life cycle of the cells. Styling is currently implemented in nested SCSS, but a change to vanilla CSS may improve load time and game speed.",
-    "technologies": ["SCSS", "JavaScript", "React"],
-    "liveUrl": "https://codepen.io/ogdendavis/full/LQXgZZ/",
-    "repoUrl": "https://codepen.io/ogdendavis/pen/LQXgZZ",
-    "imageMonitor": "images/portfolio/gameOfLife-monitor.png",
-    "imagePhone": "images/portfolio/gameOfLife-phone.png"
-  },
-  "androidLogo": {
-    "name": "CSS Android",
-    "description": "An Android logo with custom animations. No JavaScript was used for this project -- all animations were created with CSS pseudo-classes. This project was based on a tutorial, but has been expanded well beyond the original functionality.",
-    "technologies": ["HTML", "CSS"],
-    "liveUrl": "https://ogdendavis.github.io/android-logo/",
-    "repoUrl": "https://github.com/ogdendavis/android-logo",
-    "imageMonitor": "images/portfolio/android-monitor.png",
-    "imagePhone": "images/portfolio/android-phone.png"
-  },
-  "heatMap": {
-    "name": "Literal Heat Map",
-    "description": "A visual representation of global monthly temperatures from 1753 to 2015. An asynchronous AJAX request is sent after the page loads to get temperature data from a third party in the form of a JSON object. D3 is used to handle the translation of that data into visual representation, and the page is redrawn whenever the window is resized, so that all data fits on the screen at all times.",
-    "technologies": ["HTML", "CSS", "JavaScript", "D3", "JSON", "AJAX"],
-    "liveUrl": "https://codepen.io/ogdendavis/full/yjJNGw/",
-    "repoUrl": "https://codepen.io/ogdendavis/pen/yjJNGw",
-    "imageMonitor": "images/portfolio/heatMap-monitor.png",
-    "imagePhone": "images/portfolio/heatMap-phone.png"
-  },
-  "googleClone": {
-    "name": "Google Clone",
-    "description": "A clone of the Google homepage and a results page, with some added “functionality.” The pages themselves are built in pure HTML5 and CSS, and a dab of vanilla JavaScript is used to create a little bit of fun with the search. SVG icons were customized for this project, as well.",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "liveUrl": "https://ogdendavis.github.io/google-clone/",
-    "repoUrl": "https://github.com/ogdendavis/google-clone",
-    "imageMonitor": "images/portfolio/google-clone-monitor.png",
-    "imagePhone": "images/portfolio/google-clone-phone.png"
   },
   "simon": {
     "name": "Simon Game",
