@@ -168,9 +168,9 @@ class Portfolio extends React.Component {
     });
 
     const sorter = !sorterVisible ? null :
-    <ul className="sorter__list">
-      {techToggles}
-    </ul>;
+      <ul className="sorter__list">
+        {techToggles}
+      </ul>;
 
     return (
       <div className="sorter">
@@ -192,6 +192,10 @@ class Portfolio extends React.Component {
     }
   }
 
+  listenForClickToCloseSorter(event) {
+
+  }
+
   handleSorterButtonClick(event) {
     if (this.state.sorterVisible === false) {
       this.showTechToggles(event);
@@ -202,13 +206,13 @@ class Portfolio extends React.Component {
 
   showTechToggles(event) {
     this.setState({ sorterVisible: true });
-    document.querySelector('.sorter--button').innerText = 'Hide list';
+    document.querySelector('.sorter__button').innerText = 'Hide list';
     window.setTimeout(() => {window.addEventListener('click', this.hideTechToggles, {once: true})}, 100);
   }
 
   hideTechToggles(event) {
     this.setState({ sorterVisible: false });
-    document.querySelector('.sorter--button').innerText = 'Filter projects by technology';
+    document.querySelector('.sorter__button').innerText = 'Filter projects by technology';
   }
 
   checkActiveTech(projectTech) {
