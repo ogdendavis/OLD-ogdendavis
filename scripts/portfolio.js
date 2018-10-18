@@ -240,6 +240,7 @@ class Portfolio extends React.Component {
       <div className="portfolio__container">
         <img className="heading__image" src="images/lucas-pistol-in-peru-small.jpg" alt="Lucas does a pistol (one-legged squat) on a mountain in Peru" />
         <h1 className="heading">My Portfolio</h1>
+        <p style={{fontSize: '0.75em'}}>These are only some of my projects -- more can be seen on my <a href="https://github.com/ogdendavis" target="_blank">GitHub profile</a></p>
         {this.drawSorter(this.state.sorterVisible)}
         {this.drawProjects()}
       </div>
