@@ -110,14 +110,27 @@ class Nav extends React.Component {
           {this.pickNav()}
           {this.buttonize()}
         </ul>
-        <div className={this.state.home ? 'nav__outside-links' : 'nav__outside-links--header'}>
-          <a href="https://github.com/ogdendavis" target="_blank">GitHub</a>
-          <br />
-          <a href="https://codepen.io/ogdendavis" target="_blank">CodePen</a>
-        </div>
       </nav>
     )
   }
 }
 
+const Footer = (props) => {
+  const locationString = window.location.toString();
+  const homePage = (!locationString.endsWith('index.html') && !locationString.endsWith('.com/')) ? false : true
+  return (
+    <div className = {homePage ? 'footer footer--to-bottom' : 'footer'}>
+      <div className = "footer__contact">
+        lucas@ogdendavis.com
+      </div>
+      <div className = "footer__profiles">
+        <a href="https://github.com/ogdendavis" target="_blank">GitHub</a>
+        |
+        <a href="https://linkedin.com/in/lucasogdendavis" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  );
+}
+
 ReactDOM.render(<Nav />, document.querySelector('header'));
+ReactDOM.render(<Footer />, document.querySelector('footer'));
