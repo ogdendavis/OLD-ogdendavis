@@ -7,14 +7,19 @@ body {
   --bg-teal-transparent: radial-gradient(rgba(74,189,172,1),rgba(74,189,172,0.8));
   --bg-teal-dark-to-very-dark: radial-gradient(var(--bg-teal-dark),var(--bg-teal-very-dark));
   --bg-orange-transparent: linear-gradient(rgba(255,239,208,0.5), rgba(255,214,131,0.7));
-  --bg-gray-transparent: linear-gradient(rgba(32,48,48,0.9),rgba(32,48,48,0.9));
-  --emphasis-color: #FC4A1A;
-  --link-color: #FFD683;
+  --bg-gray-transparent: linear-gradient(rgba(225,255,255,0.9),rgba(225,255,255,0.9));
+  --button-gradient: linear-gradient(#FFEFD0, #FFD683);
+  --button-gradient--hover: linear-gradient(#FFEFD0, #DBAE53);
+  --orange: #FC4A1A;
+  /*--link-color: #FFD683;*/
   --rounded: 0.2em;
-  --text-color: #DFDCE3;
+  --dark-gray: #444;
+  --gold: #DBAE53;
+  --white: #eee;
   --transition-time: 0.5s;
-  --visited-color: #FFEFD0;
-  color: var(--text-color);
+  /*--visited-color: #FFEFD0;*/
+  /*--text-color: asdf*/
+  color: var(--dark-gray);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
@@ -43,19 +48,19 @@ body:after {
 }
 
 a {
-  color: var(--link-color);
+  text-decoration: none;
 }
 
-a:visited {
-  color: var(--visited-color);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+a:hover {
+  text-decoration: underline;
 }
 
 figure {
   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -79,8 +84,8 @@ h2 {
 }
 
 .heading--emphasis {
-  background: var(--emphasis-color);
-  color: var(--text-color);
+  background: var(--orange);
+  color: var(--white);
   margin: 0.5em auto;
 }
 
@@ -118,7 +123,7 @@ h2 {
 }
 
 .nav__button {
-  background: linear-gradient(var(--visited-color), var(--link-color));
+  background: var(--button-gradient);
   border: 0;
   border-radius: var(--rounded);
   font-size: 1.25em;
@@ -133,8 +138,8 @@ h2 {
 }
 
 .nav__list__item:hover .nav__button {
-  background: linear-gradient(var(--visited-color), #DBAE53);
-  box-shadow: 0 0 1.5em var(--text-color);
+  background: var(--button-gradient--hover);
+  box-shadow: 0 0 1.5em var(--gold);
   color: #222;
   cursor: pointer;
 }
@@ -169,7 +174,7 @@ h2 {
   }
 
   .nav__list__item:hover .nav__list__image--about {
-    box-shadow: 0 0 1.5em var(--text-color);
+    box-shadow: 0 0 1.5em var(--gold);
   }
 
   .nav__list__image--projects {
@@ -177,7 +182,7 @@ h2 {
   }
 
   .nav__list__item:hover .nav__list__image--projects {
-    box-shadow: 0 0 1.5em var(--text-color);
+    box-shadow: 0 0 1.5em var(--gold);
   }
 
   .nav__list__image--blog {

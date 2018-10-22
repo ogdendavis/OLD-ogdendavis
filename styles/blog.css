@@ -1,5 +1,5 @@
 .blog {
-  /* Class applied to "main" for blog.html */
+  color: #eee;
 }
 
 .heading {
@@ -25,7 +25,7 @@
 
 .thumbnail:hover {
   cursor: pointer;
-  box-shadow: 0 0 1.5em var(--text-color);
+  box-shadow: 0 0 1.5em var(--gold);
   text-align: justify;
 }
 

@@ -9,14 +9,13 @@
 
 .sorter__button {
   /* Button to toggle visibility of tech list */
-  background: none;
-  border: none;
+  background: var(--button-gradient);
+  border: 0;
   border-radius: var(--rounded);
-  color: var(--link-color);
   font-size: 0.75em;
-  padding: 0;
-  text-align: left;
-  text-decoration: underline;
+  font-weight: 700;
+  margin: 0;
+  padding: 0.25em 1em;
 }
 
 .sorter__button:hover {
@@ -27,7 +26,7 @@
   /* ul of technologies */
   background: var(--bg-teal-dark-to-very-dark);
   border-radius: var(--rounded);
-  color: var(--text-color);
+  color: var(--white);
   display: block;
   line-height: 1.75em;
   list-style: none;
@@ -106,7 +105,7 @@
   border-radius: var(--rounded);
   box-shadow: inset 0 0 10px #000000;
   box-sizing: border-box;
-  color: var(--text-color);
+  color: var(--white);
   list-style: none;
   margin: 0 3%;
   padding: 0.5em;
