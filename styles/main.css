@@ -193,6 +193,7 @@ h2 {
 
 .nav__header {
   background: var(--orange-transparent);
+  border-bottom: 1px solid var(--gold);
   flex-direction: row;
   position: relative;
   top: 0;
