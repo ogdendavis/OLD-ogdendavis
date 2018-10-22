@@ -1,11 +1,11 @@
 /* Globals */
 
 body {
-  --bg-teal: #4ABDAC;
-  --bg-teal-dark: #0E9683;
-  --bg-teal-very-dark: #005E51;
-  --bg-teal-transparent: radial-gradient(rgba(74,189,172,1),rgba(74,189,172,0.8));
-  --bg-teal-dark-to-very-dark: radial-gradient(var(--bg-teal-dark),var(--bg-teal-very-dark));
+  --teal: #4ABDAC;
+  --teal-dark: #0E9683;
+  --teal-very-dark: #005E51;
+  /*--bg-teal-transparent: radial-gradient(rgba(74,189,172,1),rgba(74,189,172,0.8));*/
+  /*--bg-teal-dark-to-very-dark: radial-gradient(var(--teal-dark),var(--teal-very-dark));*/
   --bg-orange-transparent: linear-gradient(rgba(255,239,208,0.5), rgba(255,214,131,0.7));
   --bg-gray-transparent: linear-gradient(rgba(225,255,255,0.9),rgba(225,255,255,0.9));
   --button-gradient: linear-gradient(#FFEFD0, #FFD683);
@@ -279,7 +279,7 @@ h2 {
 
 .main {
   /*background: linear-gradient(rgba(14,150,131,0.5),rgba(14,150,131,0.5));*/
-  background: var(--bg-teal-dark);
+  background: var(--teal-dark);
   margin: auto;
   padding: 1em;
   color: var(--white);

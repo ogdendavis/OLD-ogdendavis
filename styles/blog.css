@@ -57,7 +57,7 @@
   display: block;
   height: 0.25em;
   width: 100%;
-  background: var(--bg-teal-very-dark);
+  background: var(--teal-very-dark);
 }
 
 .post p {
