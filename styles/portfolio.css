@@ -9,7 +9,7 @@
 
 .sorter__button {
   /* Button to toggle visibility of tech list */
-  background: var(--button-gradient);
+  background: var(--gold-gradient--light);
   border: 0;
   border-radius: var(--rounded);
   font-size: 0.75em;
@@ -57,7 +57,7 @@
 
 .portfolio__item {
   /* container for each individual featured project */
-  background: var(--bg-orange-transparent);
+  background: var(--orange-transparent);
   border-radius: var(--rounded);
   line-height: 1.25em;
   margin-top: 1.5em;

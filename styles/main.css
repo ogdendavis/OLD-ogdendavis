@@ -1,22 +1,22 @@
 /* Globals */
 
 body {
+  --dark-gray: #444;
+  --gold: #DBAE53;
+  --gold-gradient: linear-gradient(#FFEFD0, #DBAE53);
+  --gold-gradient--light: linear-gradient(#FFEFD0, #FFD683);
+  --orange: #FC4A1A;
+  --orange-transparent: linear-gradient(rgba(255,239,208,0.5), rgba(255,214,131,0.7));
   --teal: #4ABDAC;
   --teal-dark: #0E9683;
   --teal-very-dark: #005E51;
+  --white: #dee;
+  --white-transparent: linear-gradient(rgba(205,225,225,0.9),rgba(205,225,225,0.9));
+  --rounded: 0.2em;
+  --transition-time: 0.5s;
   /*--bg-teal-transparent: radial-gradient(rgba(74,189,172,1),rgba(74,189,172,0.8));*/
   /*--bg-teal-dark-to-very-dark: radial-gradient(var(--teal-dark),var(--teal-very-dark));*/
-  --bg-orange-transparent: linear-gradient(rgba(255,239,208,0.5), rgba(255,214,131,0.7));
-  --bg-gray-transparent: linear-gradient(rgba(225,255,255,0.9),rgba(225,255,255,0.9));
-  --button-gradient: linear-gradient(#FFEFD0, #FFD683);
-  --button-gradient--hover: linear-gradient(#FFEFD0, #DBAE53);
-  --orange: #FC4A1A;
   /*--link-color: #FFD683;*/
-  --rounded: 0.2em;
-  --dark-gray: #444;
-  --gold: #DBAE53;
-  --white: #eee;
-  --transition-time: 0.5s;
   /*--visited-color: #FFEFD0;*/
   /*--text-color: asdf*/
   color: var(--dark-gray);
@@ -34,7 +34,7 @@ body:after {
 	bottom: 0;
 	z-index: -1;
 	display: block;
-	background: var(--bg-gray-transparent), url('../images/lucas-on-trike.jpg');
+	background: var(--white-transparent), url('../images/lucas-on-trike.jpg');
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -123,7 +123,7 @@ h2 {
 }
 
 .nav__button {
-  background: var(--button-gradient);
+  background: var(--gold-gradient--light);
   border: 0;
   border-radius: var(--rounded);
   font-size: 1.25em;
@@ -138,7 +138,7 @@ h2 {
 }
 
 .nav__list__item:hover .nav__button {
-  background: var(--button-gradient--hover);
+  background: var(--gold-gradient);
   box-shadow: 0 0 1.5em var(--gold);
   color: #222;
   cursor: pointer;
@@ -197,7 +197,7 @@ h2 {
 /* Header & Nav on sub-pages (mobile) */
 
 .nav__header {
-  background: var(--bg-orange-transparent);
+  background: var(--orange-transparent);
   flex-direction: row;
   position: relative;
   top: 0;
