@@ -14,11 +14,6 @@ body {
   --white-transparent: linear-gradient(rgba(205,225,225,0.9),rgba(205,225,225,0.9));
   --rounded: 0.2em;
   --transition-time: 0.5s;
-  /*--bg-teal-transparent: radial-gradient(rgba(74,189,172,1),rgba(74,189,172,0.8));*/
-  /*--bg-teal-dark-to-very-dark: radial-gradient(var(--teal-dark),var(--teal-very-dark));*/
-  /*--link-color: #FFD683;*/
-  /*--visited-color: #FFEFD0;*/
-  /*--text-color: asdf*/
   color: var(--dark-gray);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
@@ -190,7 +185,7 @@ h2 {
   }
 
   .nav__list__item:hover .nav__list__image--blog {
-    box-shadow: 0 0 1.5em var(--text-color);
+    box-shadow: 0 0 1.5em var(--gold);
   }
 }
 

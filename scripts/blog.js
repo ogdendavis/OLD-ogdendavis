@@ -212,7 +212,7 @@ class Blog extends React.Component {
   containInactiveThumbs(allPosts, isAnyActive) {
     const inactiveThumbs = isAnyActive === true ? allPosts.slice(2) : allPosts.slice(1);
     const morePosts = isAnyActive === true ?
-      <div className='thumbnail' style={{background: 'var(--bg-orange-transparent), url(images/lucas-on-trike.jpg)', backgroundPosition: '50% 50%', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', cursor: 'default', color: '#222'}}>
+      <div className='thumbnail' style={{background: 'var(--orange-transparent), url(images/lucas-on-trike.jpg)', backgroundPosition: '50% 50%', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', cursor: 'default', color: '#222'}}>
         <h2 className="thumbnail__title" style={{position: 'absolute', top: '-0.5em', right: '0.5em'}}>More Posts…</h2>
       </div> : null;
     return (
