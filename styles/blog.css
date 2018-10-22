@@ -47,12 +47,17 @@
 
 .post {
   /* <article> for active blog post */
-  background: linear-gradient(rgba(20,20,20,0.3), rgba(20,20,20,0.3));
-  border-radius: var(--rounded);
   box-sizing: border-box;
-  line-height: 1.35em;
-  padding: 0.25em 0.5em;
+  line-height: 1.5em;
   width: 100%
+}
+
+.post:after {
+  content: '';
+  display: block;
+  height: 0.25em;
+  width: 100%;
+  background: var(--bg-teal-very-dark);
 }
 
 .post p {

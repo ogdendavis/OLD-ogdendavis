@@ -278,9 +278,11 @@ h2 {
 /* Main (for simple pages on mobile) */
 
 .main {
-  background: linear-gradient(rgba(14,150,131,0.5),rgba(14,150,131,0.5));
+  /*background: linear-gradient(rgba(14,150,131,0.5),rgba(14,150,131,0.5));*/
+  background: var(--bg-teal-dark);
   margin: auto;
   padding: 1em;
+  color: var(--white);
 }
 
 .main--centered {
