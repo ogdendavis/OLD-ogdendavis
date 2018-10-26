@@ -101,7 +101,7 @@
 
 .portfolio__details {
   /* Container for tech list and links, which will be hidden until user mouses over */
-  background: var(--teal-very-dark);
+  background: var(--teal-dark);
   border-radius: var(--rounded);
   box-shadow: inset 0 0 10px #000000;
   box-sizing: border-box;
