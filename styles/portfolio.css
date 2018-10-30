@@ -165,4 +165,8 @@
     margin: 0 20%;
     width: 60%;
   }
+
+  .portfolio__item {
+    line-height: 1.5em;
+  }
 }
