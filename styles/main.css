@@ -14,6 +14,7 @@ body {
   --white-transparent: linear-gradient(rgba(205,225,225,0.9),rgba(205,225,225,0.9));
   --rounded: 0.2em;
   --transition-time: 0.5s;
+  --max-main-width: 980px;
   color: var(--dark-gray);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
@@ -343,7 +344,7 @@ h2 {
   .main {
     border-radius: var(--rounded);
     margin-top: 2em;
-    max-width: 640px;
+    max-width: var(--max-main-width);
     text-align: justify;
   }
 
@@ -366,7 +367,7 @@ h2 {
   font-size: 0.75em;
   line-height: 1.5em;
   margin: 1em auto 0.5em auto;
-  max-width: 672px;
+  max-width: calc(var(--max-main-width) - 8px);
 }
 
 .footer--to-bottom {
@@ -379,14 +380,14 @@ h2 {
 
 .footer__contact {
   display: inline-block;
-  margin-left: 10px;
+  padding-left: 10px;
   text-align: left;
 }
 
 .footer__profiles {
   display: inline-block;
   float: right;
-  margin-right: 10px;
+  padding-right: 10px;
   text-align: right;
 }
 
