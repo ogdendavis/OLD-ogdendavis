@@ -2,7 +2,7 @@
   "roguelike": {
     "name": "Roguelike Game",
     "category": "problem-solving",
-    "description": "A hypothetical television property wants to expand its audience, specifically targeting younger consumers who may have only experienced the show as reruns. To connect with these potential customers online, the show develops a browser-based and mobile-friendly game featuring characters from the show. This game is built in React, using Redux to manage random map generation and game logic. SCSS variables and nesting are used to keep styles easily readable, and a simple media query makes the game usable on mobile devices.",
+    "description": "A browser-based game designed to draw a younger audience to an awesome (but slightly dated) television property.",
     "technologies": ["HTML", "SCSS", "JavaScript", "React", "Redux"],
     "liveUrl": "https://ogdendavis.github.io/roguelike/",
     "repoUrl": "https://github.com/ogdendavis/roguelike",
@@ -12,7 +12,7 @@
   "heatMap": {
     "name": "Literal Heat Map",
     "category": "problem-solving",
-    "description": "A hypothetical environmental organization wants to persuade skeptics that global warming is a real issue. Since effective persuasion is emotional as opposed to purely factual, data visualization is used to show increasing average temperatures as a sea of color that becomes more and more alarmingly red. An asynchronous AJAX request is sent after the page loads to get temperature data from a third party in the form of a JSON object. D3 is used to handle the translation of that data into visual representation, and the page is redrawn whenever the window is resized, so that all data fits on the screen at all times.",
+    "description": "Using data visualization to show skeptics the reality of global warming.",
     "technologies": ["HTML", "CSS", "JavaScript", "D3", "JSON", "AJAX"],
     "liveUrl": "https://codepen.io/ogdendavis/full/yjJNGw/",
     "repoUrl": "https://codepen.io/ogdendavis/pen/yjJNGw",
@@ -22,7 +22,7 @@
   "androidLogo": {
     "name": "Logo Animations",
     "category": "problem-solving",
-    "description": "A hypothetical business has identified poor customer retention as a primary cause for declining margins. As part of an effort to improve retention, the organization launches a marketing campaign to improve customer perception of the brand. This “Easter Egg” logo is placed on the website to inspire joy, surprise, and positive emotional connection to the brand. The animations are created entirely with CSS -- no JavaScript was used for this project.",
+    "description": "Making a brand friendly and fun using CSS animations.",
     "technologies": ["HTML", "CSS"],
     "liveUrl": "https://ogdendavis.github.io/android-logo/",
     "repoUrl": "https://github.com/ogdendavis/android-logo",
@@ -32,7 +32,7 @@
   "weather": {
     "name": "Happy Weather",
     "category": "technical",
-    "description": "A weather app that loads current weather and imagery based on the user's location and time of day. The weather is loaded from a third-party API using jQuery's $get and $(document).ready to retrieve the JSON object. The Google Maps API is used to allow users to view weather at a different location, and for users whose browsers do not support location detection.",
+    "description": "Using Google Maps API to bring custom weather to users anywhere around the world.",
     "technologies": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "AJAX", "Google Maps API"],
     "liveUrl": "https://codepen.io/ogdendavis/full/mpOgVB/",
     "repoUrl": "https://codepen.io/ogdendavis/pen/mpOgVB",
@@ -42,7 +42,7 @@
   "calculator": {
     "name": "Simple Calculator",
     "category": "technical",
-    "description": "A simple-but-awesome JavaScript calculator that works just like the one sitting in your desk drawer. The calculator functionality and time-of-day background change are written in vanilla JavaScript. Bootstrap's grid system is used for the calculator display, and a simple media query modifies the calculator's position and size to make it usable on mobile devices.",
+    "description": "A simple-but-awesome JavaScript calculator with a little Easter Egg in the background image.",
     "technologies": ["HTML", "CSS", "Bootstrap", "JavaScript"],
     "liveUrl": "https://ogdendavis.github.io/calculator/",
     "repoUrl": "https://github.com/ogdendavis/calculator",
@@ -51,7 +51,7 @@
   },
   "simon": {
     "name": "Simon Game",
-    "description": "An in-browser version of the classic kid's game, with requisite 80's nostalgia. The CSS is organized using BEM naming conventions, and game state is managed using global variables in vanilla JavaScript. The JavaScript Audio Object is also used to play game sounds.",
+    "description": "An in-browser version of the classic kid's game, with requisite 80's nostalgia.",
     "technologies": ["HTML", "CSS", "jQuery", "Bootstrap"],
     "liveUrl": "https://codepen.io/ogdendavis/full/bLGGxZ/",
     "repoUrl": "https://codepen.io/ogdendavis/pen/bLGGxZ",
