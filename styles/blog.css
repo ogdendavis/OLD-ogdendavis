@@ -25,7 +25,7 @@
 
 .thumbnail:hover {
   cursor: pointer;
-  box-shadow: 0 0 1.5em var(--gold);
+  box-shadow: 0 0 1em var(--gold);
   text-align: justify;
 }
 
@@ -101,17 +101,26 @@
 @media only screen and (min-width: 640px) {
   .thumbnail {
     /* .main is 640px wide with 1em (16px) padding on sides, so 608px usable*/
-    width: 13em;
+    flex-grow: 1;
     height: 10em;
     margin: 0.15em;
+    width: 13em;
+    max-width: 50%;
   }
 
   .blog__container > .thumbnail:first-of-type {
     /* styling here because on first load, first won't necessarily be active,
     and upon click, active will always be first */
-    height: 8em;
+    border: 1px solid var(--white);
+    box-shadow: 0 0 1em var(--white);
+    height: 13em;
     margin: 0.25em 0;
     width: 100%;
+    max-width: 100%;
+  }
+  
+  .blog__container > .thumbnail:first-of-type:hover {
+    box-shadow: 0 0 2em var(--gold);
   }
 
   .thumbnail__snippet {
@@ -125,12 +134,7 @@
   .blog__thumbContainer {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: left;
   }
 
-  .blog__thumbContainer:after {
-    content: "";
-    flex: auto;
-    text-align: right;
-  }
 }
