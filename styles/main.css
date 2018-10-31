@@ -275,7 +275,6 @@ h2 {
 /* Main (for simple pages on mobile) */
 
 .main {
-  /*background: linear-gradient(rgba(14,150,131,0.5),rgba(14,150,131,0.5));*/
   background: var(--teal-dark);
   margin: auto;
   padding: 1em;
@@ -343,9 +342,10 @@ h2 {
 @media only screen and (min-width: 640px) {
   .main {
     border-radius: var(--rounded);
+    box-sizing: border-box;
     margin-top: 2em;
+    padding: 1em 2em;
     max-width: var(--max-main-width);
-    text-align: justify;
   }
 
   .main__article p {
