@@ -61,7 +61,6 @@
 }
 
 .post p {
-  text-align: justify;
   text-indent: 1em;
 }
 
@@ -121,6 +120,11 @@
   
   .blog__container > .thumbnail:first-of-type:hover {
     box-shadow: 0 0 2em var(--gold);
+  }
+  
+  .thumbnail--doublewide {
+    width: 26em;
+    max-width: 50%;
   }
 
   .thumbnail__snippet {
