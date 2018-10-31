@@ -60,13 +60,9 @@
   background: var(--orange-transparent);
   border-radius: var(--rounded);
   line-height: 1.25em;
-  margin-top: 1.5em;
+  margin-bottom: 1.5em;
   padding-bottom: 2em;
   position: relative; /* For positioning of phone screenshot image */
-}
-
-.portfolio__item:first-child {
-  margin-top: 0;
 }
 
 .portfolio__item-description {
@@ -161,12 +157,19 @@
     margin-top: 0;
   }
 
-  .portfolio__details {
-    margin: 0 20%;
-    width: 60%;
+  .portfolio {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
   }
 
   .portfolio__item {
     line-height: 1.5em;
+    width: 49%;
+  }
+
+  .portfolio__details {
+    margin: 0 20%;
+    width: 60%;
   }
 }
