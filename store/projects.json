@@ -14,9 +14,10 @@
     "category": "problem-solving",
     "description": "A simple back-end reporting tool that analyzes data from a website's analytics log.",
     "technologies": ["Python", "SQL", "PostgreSQL"],
-    "liveUrl": "https://github.com/ogdendavis/logs-analysis-project",
+    "liveUrl": "",
     "repoUrl": "https://github.com/ogdendavis/logs-analysis-project",
     "imageMonitor": "images/portfolio/analytics-monitor.png",
+    "imagePhone": ""
   },
   "heatMap": {
     "name": "Literal Heat Map",

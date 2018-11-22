@@ -14,6 +14,9 @@ Return is a JSON object with each entry in the following format:
 
 imageMonitor is landscape, 763px x 600px (screenshot is ~680px wide)
 imagePhone is portrait,  350px x 713px (screenshot is ~300px wide)
+
+The JSON object MUST have all of the above fields. However, if you don't have
+one of the links or images, you can pass a blank sring for that property
 */
 
 /*
@@ -82,11 +85,16 @@ class PortfolioItem extends React.Component {
     if (!this.state.detailsVisible) {
       return null;
     }
+    const demoLink = this.props.liveUrl === "" ? null :
+      <li><a href={this.props.liveUrl} target="_blank">See live demo</a></li>;
+    const repoLink = this.props.repoUrl === "" ? null :
+      <li><a href={this.props.repoUrl} target="_blank">See code repo</a></li>;
+
     return (
       <div className="portfolio__details">
         <ul className="portfolio__links">
-          <li><a href={this.props.liveUrl} target="_blank">See live demo</a></li>
-          <li><a href={this.props.repoUrl} target="_blank">See code repo</a></li>
+          {demoLink}
+          {repoLink}
         </ul>
         {this.makeTechTags()}
       </div>);
@@ -104,6 +112,12 @@ class PortfolioItem extends React.Component {
     if (!this.state.active) {
       return null;
     }
+
+    const monitorImage = this.props.imageMonitor === "" ? null :
+      <img src={this.props.imageMonitor} className="portfolio__image portfolio__image--landscape"/>;
+    const phoneImage = this.props.imagePhone === "" ? null :
+      <img src={this.props.imagePhone} className="portfolio__image portfolio__image--portrait"/>;
+
     return (
       <section className="portfolio__item" key={this.props.name + 'Section'}>
         <h2 className="heading--emphasis">{this.props.name}</h2>
@@ -116,8 +130,8 @@ class PortfolioItem extends React.Component {
         >
           {this.makeDetails()}
           <a href={this.props.liveUrl} target="_blank">
-            <img src={this.props.imageMonitor} className="portfolio__image portfolio__image--landscape"/>
-            <img src={this.props.imagePhone} className="portfolio__image portfolio__image--portrait"/>
+            {monitorImage}
+            {phoneImage}
           </a>
         </div>
       </section>
