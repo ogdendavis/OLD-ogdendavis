@@ -9,6 +9,15 @@
     "imageMonitor": "images/portfolio/roguelike-monitor.png",
     "imagePhone": "images/portfolio/roguelike-phone.png"
   },
+  "analytics": {
+    "name": "Analytics Reporter",
+    "category": "problem-solving",
+    "description": "A simple back-end reporting tool that analyzes data from a website's analytics log.",
+    "technologies": ["Python", "SQL", "PostgreSQL"],
+    "liveUrl": "https://github.com/ogdendavis/logs-analysis-project",
+    "repoUrl": "https://github.com/ogdendavis/logs-analysis-project",
+    "imageMonitor": "images/portfolio/analytics-monitor.png",
+  },
   "heatMap": {
     "name": "Literal Heat Map",
     "category": "problem-solving",
