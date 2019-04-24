@@ -1,4 +1,34 @@
 {
+  "slackapp": {
+    "name": "Slack/Freshdesk App",
+    "category": "problem-solving",
+    "description": "A custom solution allowing the client's employees to create multiple kinds of help desk tickets via Slack.",
+    "technologies": ["JavaScript", "Node.js", "Express"],
+    "liveUrl": "",
+    "repoUrl": "https://github.com/ogdendavis/slack-freshdesk-tickets",
+    "imageMonitor": "images/portfolio/slackapp-monitor.png",
+    "imagePhone": "images/portfolio/slackapp-phone.png"
+  },
+  "tcfopen2019": {
+    "name": "TCF Open",
+    "category": "problem-solving",
+    "description": "An online platform to host a local gym's in-house fitness competition.",
+    "technologies": ["HTML", "SCSS", "JavaScript", "PHP", "WordPress"],
+    "liveUrl": "https://tcfopen2019.com/",
+    "repoUrl": "https://github.com/ogdendavis/redvsbluevsgreen",
+    "imageMonitor": "images/portfolio/tcfopen2019-monitor.png",
+    "imagePhone": "images/portfolio/tcfopen2019-phone.png"
+  },
+  "accept": {
+    "name": "ACCEPT",
+    "category": "problem-solving",
+    "description": "A new web presence for a college admissions non-profit.",
+    "technologies": ["HTML", "SCSS", "JavaScript"],
+    "liveUrl": "https://new-accept.nationbuilder.com/",
+    "repoUrl": "https://github.com/ogdendavis/accept",
+    "imageMonitor": "images/portfolio/accept-monitor.png",
+    "imagePhone": "images/portfolio/accept-phone.png"
+  },
   "roguelike": {
     "name": "Roguelike Game",
     "category": "problem-solving",
@@ -29,43 +59,4 @@
     "imageMonitor": "images/portfolio/heatMap-monitor.png",
     "imagePhone": "images/portfolio/heatMap-phone.png"
   },
-  "androidLogo": {
-    "name": "Logo Animations",
-    "category": "problem-solving",
-    "description": "Making a brand friendly and fun using CSS animations.",
-    "technologies": ["HTML", "CSS"],
-    "liveUrl": "https://ogdendavis.github.io/android-logo/",
-    "repoUrl": "https://github.com/ogdendavis/android-logo",
-    "imageMonitor": "images/portfolio/android-monitor.png",
-    "imagePhone": "images/portfolio/android-phone.png"
-  },
-  "weather": {
-    "name": "Happy Weather",
-    "category": "technical",
-    "description": "Using Google Maps API to bring custom weather to users anywhere around the world.",
-    "technologies": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "AJAX", "Google Maps API"],
-    "liveUrl": "https://codepen.io/ogdendavis/full/mpOgVB/",
-    "repoUrl": "https://codepen.io/ogdendavis/pen/mpOgVB",
-    "imageMonitor": "images/portfolio/weather-monitor.png",
-    "imagePhone": "images/portfolio/weather-phone.png"
-  },
-  "calculator": {
-    "name": "Simple Calculator",
-    "category": "technical",
-    "description": "A simple-but-awesome JavaScript calculator with a little Easter Egg in the background image.",
-    "technologies": ["HTML", "CSS", "Bootstrap", "JavaScript"],
-    "liveUrl": "https://ogdendavis.github.io/calculator/",
-    "repoUrl": "https://github.com/ogdendavis/calculator",
-    "imageMonitor": "images/portfolio/calculator-monitor.png",
-    "imagePhone": "images/portfolio/calculator-phone.png"
-  },
-  "simon": {
-    "name": "Simon Game",
-    "description": "An in-browser version of the classic kid's game, with requisite 80's nostalgia.",
-    "technologies": ["HTML", "CSS", "jQuery", "Bootstrap"],
-    "liveUrl": "https://codepen.io/ogdendavis/full/bLGGxZ/",
-    "repoUrl": "https://codepen.io/ogdendavis/pen/bLGGxZ",
-    "imageMonitor": "images/portfolio/simon-monitor.png",
-    "imagePhone": "images/portfolio/simon-phone.png"
-  }
 }
