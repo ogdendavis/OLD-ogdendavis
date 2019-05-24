@@ -24,7 +24,7 @@
     "category": "problem-solving",
     "description": "A new web presence for a college admissions non-profit.",
     "technologies": ["HTML", "SCSS", "JavaScript"],
-    "liveUrl": "https://new-accept.nationbuilder.com/",
+    "liveUrl": "https://www.acceptgroup.org/",
     "repoUrl": "https://github.com/ogdendavis/accept",
     "imageMonitor": "images/portfolio/accept-monitor.png",
     "imagePhone": "images/portfolio/accept-phone.png"
