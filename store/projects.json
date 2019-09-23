@@ -1,4 +1,14 @@
 {
+  "hackthegates": {
+    "name": "Hack the Gates",
+    "category": "problem-solving",
+    "description": "A single-page solution for presenting information about a year-long event, built for extensibility as the project goes on.",
+    "technologies": ["HTML", "SCSS", "JavaScript", "PHP", "WordPress"],
+    "liveUrl": "https://hackthegates.org/",
+    "repoUrl": "https://github.com/ogdendavis/rrihtg",
+    "imageMonitor": "images/portfolio/htg-monitor.png",
+    "imagePhone": "images/portfolio/htg-phone.png"
+  },
   "slackapp": {
     "name": "Slack/Freshdesk App",
     "category": "problem-solving",
