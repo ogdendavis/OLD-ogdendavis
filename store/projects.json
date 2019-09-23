@@ -1,4 +1,14 @@
 {
+  "frac": {
+    "name": "Florida Regional Admissions Counselors",
+    "category": "problem-solving",
+    "description": "An online presence for a trade group, built on Zurb's Foundation framework.",
+    "technologies": ["HTML", "SCSS", "JavaScript", "PHP", "WordPress"],
+    "liveUrl": "https://wearefrac.org/",
+    "repoUrl": "https://github.com/ogdendavis/frac",
+    "imageMonitor": "images/portfolio/frac-monitor.png",
+    "imagePhone": "images/portfolio/frac-phone.png"
+  },
   "hackthegates": {
     "name": "Hack the Gates",
     "category": "problem-solving",
